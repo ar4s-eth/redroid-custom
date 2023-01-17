@@ -1,0 +1,717 @@
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'redroid/redroid_x86_64/redroid_x86_64:11/RD2A.211001.002/eng.frank.20221027.124148:userdebug/test-keys'
+Revision: '0'
+ABI: 'x86_64'
+Timestamp: 2022-12-22 13:22:07+0000
+pid: 54911, tid: 54911, name: mediaswcodec  >>> media.swcodec <<<
+uid: 1046
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+Abort message: 'Binder driver could not be opened. Terminating.'
+    rax 0000000000000000  rbx 000000000000d67f  rcx 000070869d0dd6c8  rdx 0000000000000006
+    r8  00007fffe6ceb250  r9  00007fffe6ceb250  r10 00007fffe6ceb0b0  r11 0000000000000246
+    r12 000070854bff32d0  r13 0000000000000000  r14 00007fffe6ceb0a8  r15 000000000000d67f
+    rdi 000000000000d67f  rsi 000000000000d67f
+    rbp 0000000000000000  rsp 00007fffe6ceb098  rip 000070869d0dd6c8
+
+backtrace:
+      #00 pc 000000000005a6c8  /apex/com.android.runtime/lib64/bionic/libc.so (syscall+24) (BuildId: 367a43aefd68123bf118851437b2730e)
+      #01 pc 000000000005d632  /apex/com.android.runtime/lib64/bionic/libc.so (abort+194) (BuildId: 367a43aefd68123bf118851437b2730e)
+      #02 pc 00000000000071fa  /system/lib64/liblog.so (__android_log_default_aborter+10) (BuildId: 8209228312a47a9d8fd4cc4e859b9b6d)
+      #03 pc 0000000000007e88  /system/lib64/liblog.so (__android_log_assert+376) (BuildId: 8209228312a47a9d8fd4cc4e859b9b6d)
+      #04 pc 00000000000c7b72  /apex/com.android.media.swcodec/lib64/libhidlbase.so (android::hardware::ProcessState::ProcessState(unsigned long)+386) (BuildId: 789c6362857f00ac8e5c4ed5169e139f)
+      #05 pc 00000000000c79c6  /apex/com.android.media.swcodec/lib64/libhidlbase.so (android::hardware::ProcessState::self()+134) (BuildId: 789c6362857f00ac8e5c4ed5169e139f)
+      #06 pc 0000000000065b92  /apex/com.android.media.swcodec/lib64/libhidlbase.so (android::hardware::configureBinderRpcThreadpool(unsigned long, bool)+34) (BuildId: 789c6362857f00ac8e5c4ed5169e139f)
+      #07 pc 0000000000001f0b  /apex/com.android.media.swcodec/bin/mediaswcodec (main+299) (BuildId: ba128d019b2269b1cf1c90fa8298307c)
+      #08 pc 0000000000050bf8  /apex/com.android.runtime/lib64/bionic/libc.so (__libc_init+104) (BuildId: 367a43aefd68123bf118851437b2730e)
+
+memory near rbx:
+    000000000000d658 ---------------- ----------------  ................
+    000000000000d668 ---------------- ----------------  ................
+    000000000000d678 ---------------- ----------------  ................
+    000000000000d688 ---------------- ----------------  ................
+    000000000000d698 ---------------- ----------------  ................
+    000000000000d6a8 ---------------- ----------------  ................
+    000000000000d6b8 ---------------- ----------------  ................
+    000000000000d6c8 ---------------- ----------------  ................
+    000000000000d6d8 ---------------- ----------------  ................
+    000000000000d6e8 ---------------- ----------------  ................
+    000000000000d6f8 ---------------- ----------------  ................
+    000000000000d708 ---------------- ----------------  ................
+    000000000000d718 ---------------- ----------------  ................
+    000000000000d728 ---------------- ----------------  ................
+    000000000000d738 ---------------- ----------------  ................
+    000000000000d748 ---------------- ----------------  ................
+
+memory near rcx (/apex/com.android.runtime/lib64/bionic/libc.so):
+    000070869d0dd6a8 ccccccccccccccff d68948f78948f889  ..........H..H..
+    000070869d0dd6b8 894dc2894dca8948 050f08244c8b4cc8  H..M..M..L.L$...
+    000070869d0dd6c8 0972fffff0013d48 057727e8c789d8f7  H=....r......'w.
+    000070869d0dd6d8 ccccccccccccc300 000025048b4c645f  ........_dL..%..
+    000070869d0dd6e8 8b4508408b4d0000 00001440c7411448  ..M.@.E.H.A.@...
+    000070869d0dd6f8 0f0000003ab88000 89451574c0855705  ...:.....W..t.E.
+    000070869d0dd708 fffff0013d481448 e5e8c789d8f70972  H.H=....r.......
+    000070869d0dd718 ccccccccc3000576 4155415641574155  v.......UAWAVAUA
+    000070869d0dd728 894868ec83485354 6f8bfd8949102474  TSH..hH.t$.I...o
+    000070869d0dd738 244c8948ed854814 1174302454894838  .H..H.L$8H.T$0t.
+    000070869d0dd748 c0310b73086d3941 ebed310824448948  A9m.s.1.H.D$.1..
+    000070869d0dd758 4ce8894ced014c0b c0760f6608246c89  .L..L..L.l$.f.v.
+    000070869d0dd768 7f0f6648246c894c 1024748b4c502444  L.l$Hf..D$PL.t$.
+    000070869d0dd778 0000002ebef7894c 448948000717cbe8  L............H.D
+    000070869d0dd788 eb894800458b4024 7e0ff308246c8b48  $@.E.H..H.l$...~
+    000070869d0dd798 66c16f0f6608054c 66fffc5c3905760f  L..f.o.f.v.9\..f
+
+memory near r8 ([stack]):
+    00007fffe6ceb230 0000000000000000 0000000000000000  ................
+    00007fffe6ceb240 0000000000000000 0000000000000000  ................
+    00007fffe6ceb250 64207265646e6942 6f63207265766972  Binder driver co
+    00007fffe6ceb260 20746f6e20646c75 656e65706f206562  uld not be opene
+    00007fffe6ceb270 696d726554202e64 002e676e6974616e  d. Terminating..
+    00007fffe6ceb280 0000000000000000 0000000000000000  ................
+    00007fffe6ceb290 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2a0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2b0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2c0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2d0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2e0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2f0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb300 0000000000000000 0000000000000000  ................
+    00007fffe6ceb310 0000000000000000 0000000000000000  ................
+    00007fffe6ceb320 0000000000000000 0000000000000000  ................
+
+memory near r9 ([stack]):
+    00007fffe6ceb230 0000000000000000 0000000000000000  ................
+    00007fffe6ceb240 0000000000000000 0000000000000000  ................
+    00007fffe6ceb250 64207265646e6942 6f63207265766972  Binder driver co
+    00007fffe6ceb260 20746f6e20646c75 656e65706f206562  uld not be opene
+    00007fffe6ceb270 696d726554202e64 002e676e6974616e  d. Terminating..
+    00007fffe6ceb280 0000000000000000 0000000000000000  ................
+    00007fffe6ceb290 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2a0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2b0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2c0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2d0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2e0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb2f0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb300 0000000000000000 0000000000000000  ................
+    00007fffe6ceb310 0000000000000000 0000000000000000  ................
+    00007fffe6ceb320 0000000000000000 0000000000000000  ................
+
+memory near r10 ([stack]):
+    00007fffe6ceb090 0000000000000000 000070869d0e0633  ........3....p..
+    00007fffe6ceb0a0 00007fffe6ceb250 ffffffffffffffdf  P...............
+    00007fffe6ceb0b0 0000000000000000 00000000ffffffff  ................
+    00007fffe6ceb0c0 000004160000d67f 0000000000000000  ................
+    00007fffe6ceb0d0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb0e0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb0f0 0000000000000000 0000000000000000  ................
+    00007fffe6ceb100 0000000000000000 0000000000000000  ................
+    00007fffe6ceb110 0000000000000000 0000000000000000  ................
+    00007fffe6ceb120 0000000000000000 0000000000000000  ................
+    00007fffe6ceb130 000070869e6a82f8 000070869d0d4387  ..j..p...C...p..
+    00007fffe6ceb140 00007fffe6ceb250 000070854bff32d0  P........2.K.p..
+    00007fffe6ceb150 00007fffe6ceb250 000070869cdc880c  P............p..
+    00007fffe6ceb160 000070869cdc97fa 000070869d7611fb  .....p....v..p..
+    00007fffe6ceb170 0000000000000001 000070869d761e89  ..........v..p..
+    00007fffe6ceb180 0000003000000018 00007fffe6ceb670  ....0...p.......
+
+memory near r12:
+    000070854bff32b0 0000000000000000 0000000000000000  ................
+    000070854bff32c0 e09d00000014810c 0000000000000000  ................
+    000070854bff32d0 000070869ce6bce0 00007086ffffffff  .....p.......p..
+    000070854bff32e0 ffffffffffffffff 0000000000000000  ................
+    000070854bff32f0 0000000000000000 0000000000000000  ................
+    000070854bff3300 0000000000000000 0000000000000000  ................
+    000070854bff3310 0000000000000000 0000000000000000  ................
+    000070854bff3320 0000000000000000 0000000000000000  ................
+    000070854bff3330 0000000000000000 0000000000000000  ................
+    000070854bff3340 0000000000000000 0000000000000000  ................
+    000070854bff3350 0000000000000000 0000000000000000  ................
+    000070854bff3360 0000000000000000 0000000000000000  ................
+    000070854bff3370 0000000000000000 0000000000000000  ................
+    000070854bff3380 000070869ce6bf20 0000000000000000   ....p..........
+    000070854bff3390 0000000000000000 0000000000000000  ................
+    000070854bff33a0 0000000000000010 0000000000000000  ................
+
+memory near r14 ([stack]):
+    00007fffe6ceb088 000070869cdc97fa 0000000000000000  .....p..........
+    00007fffe6ceb098 000070869d0e0633 00007fffe6ceb250  3....p..P.......
+    00007fffe6ceb0a8 ffffffffffffffdf 0000000000000000  ................
+    00007fffe6ceb0b8 00000000ffffffff 000004160000d67f  ................
+    00007fffe6ceb0c8 0000000000000000 0000000000000000  ................
+    00007fffe6ceb0d8 0000000000000000 0000000000000000  ................
+    00007fffe6ceb0e8 0000000000000000 0000000000000000  ................
+    00007fffe6ceb0f8 0000000000000000 0000000000000000  ................
+    00007fffe6ceb108 0000000000000000 0000000000000000  ................
+    00007fffe6ceb118 0000000000000000 0000000000000000  ................
+    00007fffe6ceb128 0000000000000000 000070869e6a82f8  ..........j..p..
+    00007fffe6ceb138 000070869d0d4387 00007fffe6ceb250  .C...p..P.......
+    00007fffe6ceb148 000070854bff32d0 00007fffe6ceb250  .2.K.p..P.......
+    00007fffe6ceb158 000070869cdc880c 000070869cdc97fa  .....p.......p..
+    00007fffe6ceb168 000070869d7611fb 0000000000000001  ..v..p..........
+    00007fffe6ceb178 000070869d761e89 0000003000000018  ..v..p......0...
+
+memory near r15:
+    000000000000d658 ---------------- ----------------  ................
+    000000000000d668 ---------------- ----------------  ................
+    000000000000d678 ---------------- ----------------  ................
+    000000000000d688 ---------------- ----------------  ................
+    000000000000d698 ---------------- ----------------  ................
+    000000000000d6a8 ---------------- ----------------  ................
+    000000000000d6b8 ---------------- ----------------  ................
+    000000000000d6c8 ---------------- ----------------  ................
+    000000000000d6d8 ---------------- ----------------  ................
+    000000000000d6e8 ---------------- ----------------  ................
+    000000000000d6f8 ---------------- ----------------  ................
+    000000000000d708 ---------------- ----------------  ................
+    000000000000d718 ---------------- ----------------  ................
+    000000000000d728 ---------------- ----------------  ................
+    000000000000d738 ---------------- ----------------  ................
+    000000000000d748 ---------------- ----------------  ................
+
+memory near rdi:
+    000000000000d658 ---------------- ----------------  ................
+    000000000000d668 ---------------- ----------------  ................
+    000000000000d678 ---------------- ----------------  ................
+    000000000000d688 ---------------- ----------------  ................
+    000000000000d698 ---------------- ----------------  ................
+    000000000000d6a8 ---------------- ----------------  ................
+    000000000000d6b8 ---------------- ----------------  ................
+    000000000000d6c8 ---------------- ----------------  ................
+    000000000000d6d8 ---------------- ----------------  ................
+    000000000000d6e8 ---------------- ----------------  ................
+    000000000000d6f8 ---------------- ----------------  ................
+    000000000000d708 ---------------- ----------------  ................
+    000000000000d718 ---------------- ----------------  ................
+    000000000000d728 ---------------- ----------------  ................
+    000000000000d738 ---------------- ----------------  ................
+    000000000000d748 ---------------- ----------------  ................
+
+memory near rsi:
+    000000000000d658 ---------------- ----------------  ................
+    000000000000d668 ---------------- ----------------  ................
+    000000000000d678 ---------------- ----------------  ................
+    000000000000d688 ---------------- ----------------  ................
+    000000000000d698 ---------------- ----------------  ................
+    000000000000d6a8 ---------------- ----------------  ................
+    000000000000d6b8 ---------------- ----------------  ................
+    000000000000d6c8 ---------------- ----------------  ................
+    000000000000d6d8 ---------------- ----------------  ................
+    000000000000d6e8 ---------------- ----------------  ................
+    000000000000d6f8 ---------------- ----------------  ................
+    000000000000d708 ---------------- ----------------  ................
+    000000000000d718 ---------------- ----------------  ................
+    000000000000d728 ---------------- ----------------  ................
+    000000000000d738 ---------------- ----------------  ................
+    000000000000d748 ---------------- ----------------  ................
+
+memory near rsp ([stack]):
+    00007fffe6ceb078 00007fffe6ceb250 00007fffe6ceb0a8  P...............
+    00007fffe6ceb088 000070869cdc97fa 0000000000000000  .....p..........
+    00007fffe6ceb098 000070869d0e0633 00007fffe6ceb250  3....p..P.......
+    00007fffe6ceb0a8 ffffffffffffffdf 0000000000000000  ................
+    00007fffe6ceb0b8 00000000ffffffff 000004160000d67f  ................
+    00007fffe6ceb0c8 0000000000000000 0000000000000000  ................
+    00007fffe6ceb0d8 0000000000000000 0000000000000000  ................
+    00007fffe6ceb0e8 0000000000000000 0000000000000000  ................
+    00007fffe6ceb0f8 0000000000000000 0000000000000000  ................
+    00007fffe6ceb108 0000000000000000 0000000000000000  ................
+    00007fffe6ceb118 0000000000000000 0000000000000000  ................
+    00007fffe6ceb128 0000000000000000 000070869e6a82f8  ..........j..p..
+    00007fffe6ceb138 000070869d0d4387 00007fffe6ceb250  .C...p..P.......
+    00007fffe6ceb148 000070854bff32d0 00007fffe6ceb250  .2.K.p..P.......
+    00007fffe6ceb158 000070869cdc880c 000070869cdc97fa  .....p.......p..
+    00007fffe6ceb168 000070869d7611fb 0000000000000001  ..v..p..........
+
+memory near rip (/apex/com.android.runtime/lib64/bionic/libc.so):
+    000070869d0dd6a8 ccccccccccccccff d68948f78948f889  ..........H..H..
+    000070869d0dd6b8 894dc2894dca8948 050f08244c8b4cc8  H..M..M..L.L$...
+    000070869d0dd6c8 0972fffff0013d48 057727e8c789d8f7  H=....r......'w.
+    000070869d0dd6d8 ccccccccccccc300 000025048b4c645f  ........_dL..%..
+    000070869d0dd6e8 8b4508408b4d0000 00001440c7411448  ..M.@.E.H.A.@...
+    000070869d0dd6f8 0f0000003ab88000 89451574c0855705  ...:.....W..t.E.
+    000070869d0dd708 fffff0013d481448 e5e8c789d8f70972  H.H=....r.......
+    000070869d0dd718 ccccccccc3000576 4155415641574155  v.......UAWAVAUA
+    000070869d0dd728 894868ec83485354 6f8bfd8949102474  TSH..hH.t$.I...o
+    000070869d0dd738 244c8948ed854814 1174302454894838  .H..H.L$8H.T$0t.
+    000070869d0dd748 c0310b73086d3941 ebed310824448948  A9m.s.1.H.D$.1..
+    000070869d0dd758 4ce8894ced014c0b c0760f6608246c89  .L..L..L.l$.f.v.
+    000070869d0dd768 7f0f6648246c894c 1024748b4c502444  L.l$Hf..D$PL.t$.
+    000070869d0dd778 0000002ebef7894c 448948000717cbe8  L............H.D
+    000070869d0dd788 eb894800458b4024 7e0ff308246c8b48  $@.E.H..H.l$...~
+    000070869d0dd798 66c16f0f6608054c 66fffc5c3905760f  L..f.o.f.v.9\..f
+
+memory map (474 entries):
+    00005af0'45788000-00005af0'45788fff r--         0      1000  /apex/com.android.media.swcodec/bin/mediaswcodec (BuildId: ba128d019b2269b1cf1c90fa829830) (load bias 0x1000)
+    00005af0'45789000-00005af0'4578afff r-x         0      2000  /apex/com.android.media.swcodec/bin/mediaswcodec (BuildId: ba128d019b2269b1cf1c90fa8298307c) (load bias 0x1000)
+    00005af0'4578b000-00005af0'4578bfff r--      1000      1000  /apex/com.android.media.swcodec/bin/mediaswcodec (BuildId: ba128d019b2269b1cf1c90fa829830) (load bias 0x1000)
+    00007084'0bfe9000-00007084'3976afff ---         0  2d782000
+    00007084'3976b000-00007084'3976bfff r--         0      1000
+    00007084'3976c000-00007084'4441cfff ---         0   acb1000
+    00007084'4441d000-00007084'4441dfff r--         0      1000
+    00007084'4441e000-00007084'4bfe7fff ---         0   7bca000
+    00007084'4bfe8000-00007084'4bfe8fff r--         0      1000
+    00007084'4bfe9000-00007084'8bff7fff ---         0  4000f000
+    00007084'8bff8000-00007084'8c037fff rw-         0     40000
+    00007084'8c038000-00007084'9bff7fff ---         0   ffc0000
+    00007084'9bff8000-00007084'9c037fff rw-         0     40000
+    00007084'9c038000-00007084'abff3fff ---         0   ffbc000
+    00007084'abff4000-00007084'ac033fff rw-         0     40000
+    00007084'ac034000-00007084'bbff2fff ---         0   ffbf000
+    00007084'bbff3000-00007084'bc032fff rw-         0     40000
+    00007084'bc033000-00007084'cbff0fff ---         0   ffbe000
+    00007084'cbff1000-00007084'cc030fff rw-         0     40000
+    00007084'cc031000-00007084'dbfedfff ---         0   ffbd000
+    00007084'dbfee000-00007084'dc02dfff rw-         0     40000
+    00007084'dc02e000-00007084'ebff8fff ---         0   ffcb000
+    00007084'ebff9000-00007084'ec038fff rw-         0     40000
+    00007084'ec039000-00007084'fbfeefff ---         0   ffb6000
+    00007084'fbfef000-00007084'fc02efff rw-         0     40000
+    00007084'fc02f000-00007085'0bfebfff ---         0   ffbd000
+    00007085'0bfec000-00007085'0c02bfff rw-         0     40000
+    00007085'0c02c000-00007085'2bfebfff ---         0  1ffc0000
+    00007085'2bfec000-00007085'2c02bfff rw-         0     40000
+    00007085'2c02c000-00007085'3bff1fff ---         0   ffc6000
+    00007085'3bff2000-00007085'3c031fff rw-         0     40000
+    00007085'3c032000-00007085'4bff2fff ---         0   ffc1000
+    00007085'4bff3000-00007085'4c032fff rw-         0     40000
+    00007085'4c033000-00007085'5bff0fff ---         0   ffbe000
+    00007085'5bff1000-00007085'5c030fff rw-         0     40000
+    00007085'5c031000-00007085'6bfedfff ---         0   ffbd000
+    00007085'6bfee000-00007085'6c02dfff rw-         0     40000
+    00007085'6c02e000-00007085'7bfebfff ---         0   ffbe000
+    00007085'7bfec000-00007085'7c02bfff rw-         0     40000
+    00007085'7c02c000-00007085'8bfeffff ---         0   ffc4000
+    00007085'8bff0000-00007085'8c02ffff rw-         0     40000
+    00007085'8c030000-00007085'9bfedfff ---         0   ffbe000
+    00007085'9bfee000-00007085'9c02dfff rw-         0     40000
+    00007085'9c02e000-00007085'abff8fff ---         0   ffcb000
+    00007085'abff9000-00007085'ac038fff rw-         0     40000
+    00007085'ac039000-00007085'bbfeafff ---         0   ffb2000
+    00007085'bbfeb000-00007085'bc02afff rw-         0     40000
+    00007085'bc02b000-00007085'cbff8fff ---         0   ffce000
+    00007085'cbff9000-00007085'cc038fff rw-         0     40000
+    00007085'cc039000-00007085'dbff8fff ---         0   ffc0000
+    00007085'dbff9000-00007085'dc038fff rw-         0     40000
+    00007085'dc039000-00007086'9bfe8fff ---         0  bffb0000
+    00007086'9bfe9000-00007086'9bfe9fff r--         0      1000  /system/lib64/android.hardware.common-V1-ndk_platform.so (BuildId: fe84887827ee721b33b120d5600c1f) (load bias 0x1000)
+    00007086'9bfea000-00007086'9bfebfff r-x         0      2000  /system/lib64/android.hardware.common-V1-ndk_platform.so (BuildId: fe84887827ee721b33b120d5600c1f) (load bias 0x1000)
+    00007086'9bfec000-00007086'9bfecfff r--      1000      1000  /system/lib64/android.hardware.common-V1-ndk_platform.so (BuildId: fe84887827ee721b33b120d5600c1f) (load bias 0x1000)
+    00007086'9bfed000-00007086'9bfedfff rw-      1000      1000  /system/lib64/android.hardware.common-V1-ndk_platform.so (BuildId: fe84887827ee721b33b120d5600c1f) (load bias 0x1000)
+    00007086'9c016000-00007086'9c022fff r--         0      d000  /system/lib64/android.hardware.graphics.mapper@3.0.so (BuildId: 210dbeff804e2820a7bfc0c7d2ce50) (load bias 0x1000)
+    00007086'9c023000-00007086'9c031fff r-x      c000      f000  /system/lib64/android.hardware.graphics.mapper@3.0.so (BuildId: 210dbeff804e2820a7bfc0c7d2ce50) (load bias 0x1000)
+    00007086'9c032000-00007086'9c034fff r--     1a000      3000  /system/lib64/android.hardware.graphics.mapper@3.0.so (BuildId: 210dbeff804e2820a7bfc0c7d2ce50) (load bias 0x1000)
+    00007086'9c035000-00007086'9c035fff rw-     1c000      1000  /system/lib64/android.hardware.graphics.mapper@3.0.so (BuildId: 210dbeff804e2820a7bfc0c7d2ce50) (load bias 0x1000)
+    00007086'9c05d000-00007086'9c063fff r--         0      7000  /apex/com.android.media.swcodec/lib64/libcutils.so (BuildId: 42affb0e00be1111362d9e6ff571ca) (load bias 0x1000)
+    00007086'9c064000-00007086'9c06cfff r-x      6000      9000  /apex/com.android.media.swcodec/lib64/libcutils.so (BuildId: 42affb0e00be1111362d9e6ff571ca) (load bias 0x1000)
+    00007086'9c06d000-00007086'9c06efff r--      e000      2000  /apex/com.android.media.swcodec/lib64/libcutils.so (BuildId: 42affb0e00be1111362d9e6ff571ca) (load bias 0x1000)
+    00007086'9c06f000-00007086'9c06ffff rw-      f000      1000  /apex/com.android.media.swcodec/lib64/libcutils.so (BuildId: 42affb0e00be1111362d9e6ff571ca) (load bias 0x1000)
+    00007086'9c070000-00007086'9c070fff rw-         0      1000
+    00007086'9c09c000-00007086'9c0abfff r--         0     10000  /system/lib64/libSurfaceFlingerProp.so (BuildId: 1cd2225292395c51e5c31231149d63) (load bias 0x1000)
+    00007086'9c0ac000-00007086'9c0b7fff r-x      f000      c000  /system/lib64/libSurfaceFlingerProp.so (BuildId: 1cd2225292395c51e5c31231149d63) (load bias 0x1000)
+    00007086'9c0b8000-00007086'9c0b9fff r--     1a000      2000  /system/lib64/libSurfaceFlingerProp.so (BuildId: 1cd2225292395c51e5c31231149d63) (load bias 0x1000)
+    00007086'9c0ba000-00007086'9c0bafff rw-     1b000      1000  /system/lib64/libSurfaceFlingerProp.so (BuildId: 1cd2225292395c51e5c31231149d63) (load bias 0x1000)
+    00007086'9c0c2000-00007086'9c0c4fff r--         0      3000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common-V1-ndk_platform.so (BuildId: d6e299ccc92c49a16c5053541b35ca) (load bias 0x1000)
+    00007086'9c0c5000-00007086'9c0c6fff r-x      2000      2000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common-V1-ndk_platform.so (BuildId: d6e299ccc92c49a16c5053541b35ca) (load bias 0x1000)
+    00007086'9c0c7000-00007086'9c0c7fff r--      3000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common-V1-ndk_platform.so (BuildId: d6e299ccc92c49a16c5053541b35ca) (load bias 0x1000)
+    00007086'9c0c8000-00007086'9c0c8fff rw-      3000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common-V1-ndk_platform.so (BuildId: d6e299ccc92c49a16c5053541b35ca) (load bias 0x1000)
+    00007086'9c138000-00007086'9c156fff r--         0     1f000  /apex/com.android.media.swcodec/lib64/libstagefright_bufferqueue_helper.so (BuildId: 0347e3f3c77b45174eaff8bcaadd45) (load bias 0x1000)
+    00007086'9c157000-00007086'9c178fff r-x     1e000     22000  /apex/com.android.media.swcodec/lib64/libstagefright_bufferqueue_helper.so (BuildId: 0347e3f3c77b45174eaff8bcaadd45) (load bias 0x1000)
+    00007086'9c179000-00007086'9c17cfff r--     3f000      4000  /apex/com.android.media.swcodec/lib64/libstagefright_bufferqueue_helper.so (BuildId: 0347e3f3c77b45174eaff8bcaadd45) (load bias 0x1000)
+    00007086'9c17d000-00007086'9c17dfff rw-     42000      1000  /apex/com.android.media.swcodec/lib64/libstagefright_bufferqueue_helper.so (BuildId: 0347e3f3c77b45174eaff8bcaadd45) (load bias 0x1000)
+    00007086'9c187000-00007086'9c193fff r--         0      d000  /apex/com.android.media.swcodec/lib64/libcodec2_hidl@1.1.so (BuildId: 14a5e4f2d101b15bff6194e127676f) (load bias 0x1000)
+    00007086'9c194000-00007086'9c19efff r-x      c000      b000  /apex/com.android.media.swcodec/lib64/libcodec2_hidl@1.1.so (BuildId: 14a5e4f2d101b15bff6194e127676f) (load bias 0x1000)
+    00007086'9c19f000-00007086'9c1a0fff r--     16000      2000  /apex/com.android.media.swcodec/lib64/libcodec2_hidl@1.1.so (BuildId: 14a5e4f2d101b15bff6194e127676f) (load bias 0x1000)
+    00007086'9c1a1000-00007086'9c1a1fff rw-     17000      1000  /apex/com.android.media.swcodec/lib64/libcodec2_hidl@1.1.so (BuildId: 14a5e4f2d101b15bff6194e127676f) (load bias 0x1000)
+    00007086'9c1c0000-00007086'9c1d4fff r--         0     15000  /system/lib64/libEGL.so (BuildId: b36fc41daabe7ab39da454a0da63f3) (load bias 0x1000)
+    00007086'9c1d5000-00007086'9c1eefff r-x     14000     1a000  /system/lib64/libEGL.so (BuildId: b36fc41daabe7ab39da454a0da63f3) (load bias 0x1000)
+    00007086'9c1ef000-00007086'9c1f3fff r--     2d000      5000  /system/lib64/libEGL.so (BuildId: b36fc41daabe7ab39da454a0da63f3) (load bias 0x1000)
+    00007086'9c1f4000-00007086'9c1f4fff rw-     31000      1000  /system/lib64/libEGL.so (BuildId: b36fc41daabe7ab39da454a0da63f3) (load bias 0x1000)
+    00007086'9c1f5000-00007086'9c1fdfff rw-         0      9000
+    00007086'9c22f000-00007086'9c232fff r--         0      4000  /apex/com.android.media.swcodec/lib64/libmedia_codecserviceregistrant.so (BuildId: 3a268dc2045d521f2bf277177e338e) (load bias 0x1000)
+    00007086'9c233000-00007086'9c239fff r-x      3000      7000  /apex/com.android.media.swcodec/lib64/libmedia_codecserviceregistrant.so (BuildId: 3a268dc2045d521f2bf277177e338e) (load bias 0x1000)
+    00007086'9c23a000-00007086'9c23afff r--      9000      1000  /apex/com.android.media.swcodec/lib64/libmedia_codecserviceregistrant.so (BuildId: 3a268dc2045d521f2bf277177e338e) (load bias 0x1000)
+    00007086'9c254000-00007086'9c260fff r--         0      d000  /system/lib64/android.hardware.graphics.mapper@2.1.so (BuildId: 68fccd0dad3cf668a7e99b3d577b0b) (load bias 0x1000)
+    00007086'9c261000-00007086'9c26cfff r-x      c000      c000  /system/lib64/android.hardware.graphics.mapper@2.1.so (BuildId: 68fccd0dad3cf668a7e99b3d577b0b) (load bias 0x1000)
+    00007086'9c26d000-00007086'9c26ffff r--     17000      3000  /system/lib64/android.hardware.graphics.mapper@2.1.so (BuildId: 68fccd0dad3cf668a7e99b3d577b0b) (load bias 0x1000)
+    00007086'9c270000-00007086'9c270fff rw-     19000      1000  /system/lib64/android.hardware.graphics.mapper@2.1.so (BuildId: 68fccd0dad3cf668a7e99b3d577b0b) (load bias 0x1000)
+    00007086'9c287000-00007086'9c28ffff r--         0      9000  /system/lib64/liblzma.so (BuildId: 6b792159b56f904378c70a6792169d) (load bias 0x1000)
+    00007086'9c290000-00007086'9c2affff r-x      8000     20000  /system/lib64/liblzma.so (BuildId: 6b792159b56f904378c70a6792169d) (load bias 0x1000)
+    00007086'9c2b0000-00007086'9c2b1fff r--     27000      2000  /system/lib64/liblzma.so (BuildId: 6b792159b56f904378c70a6792169d) (load bias 0x1000)
+    00007086'9c2b2000-00007086'9c2b2fff rw-     28000      1000  /system/lib64/liblzma.so (BuildId: 6b792159b56f904378c70a6792169d) (load bias 0x1000)
+    00007086'9c2b3000-00007086'9c2b8fff rw-         0      6000
+    00007086'9c2cf000-00007086'9c2d1fff r--         0      3000  /apex/com.android.media.swcodec/lib64/libhidlmemory.so (BuildId: 23cdc430886a18398a510be1708111) (load bias 0x1000)
+    00007086'9c2d2000-00007086'9c2d3fff r-x      2000      2000  /apex/com.android.media.swcodec/lib64/libhidlmemory.so (BuildId: 23cdc430886a18398a510be1708111) (load bias 0x1000)
+    00007086'9c2d4000-00007086'9c2d5fff r--      3000      2000  /apex/com.android.media.swcodec/lib64/libhidlmemory.so (BuildId: 23cdc430886a18398a510be1708111) (load bias 0x1000)
+    00007086'9c2d6000-00007086'9c2d6fff rw-      4000      1000  /apex/com.android.media.swcodec/lib64/libhidlmemory.so (BuildId: 23cdc430886a18398a510be1708111) (load bias 0x1000)
+    00007086'9c300000-00007086'9c313fff r--         0     14000  /system/lib64/libbase.so (BuildId: 57a25d3b12cb351c70780a20000ea4) (load bias 0x1000)
+    00007086'9c314000-00007086'9c37cfff r-x     13000     69000  /system/lib64/libbase.so (BuildId: 57a25d3b12cb351c70780a20000ea4) (load bias 0x1000)
+    00007086'9c37d000-00007086'9c37efff r--     7b000      2000  /system/lib64/libbase.so (BuildId: 57a25d3b12cb351c70780a20000ea4) (load bias 0x1000)
+    00007086'9c37f000-00007086'9c37ffff rw-     7c000      1000  /system/lib64/libbase.so (BuildId: 57a25d3b12cb351c70780a20000ea4) (load bias 0x1000)
+    00007086'9c385000-00007086'9c38ffff r--         0      b000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@2.0.so (BuildId: c1bb1b189c34befff003fce4f0b0a0) (load bias 0x1000)
+    00007086'9c390000-00007086'9c399fff r-x      a000      a000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@2.0.so (BuildId: c1bb1b189c34befff003fce4f0b0a0) (load bias 0x1000)
+    00007086'9c39a000-00007086'9c39cfff r--     13000      3000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@2.0.so (BuildId: c1bb1b189c34befff003fce4f0b0a0) (load bias 0x1000)
+    00007086'9c39d000-00007086'9c39dfff rw-     15000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@2.0.so (BuildId: c1bb1b189c34befff003fce4f0b0a0) (load bias 0x1000)
+    00007086'9c3d0000-00007086'9c3e0fff r--         0     11000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@4.0.so (BuildId: f47672d158e341b90e90cce7841c04) (load bias 0x1000)
+    00007086'9c3e1000-00007086'9c3f4fff r-x     10000     14000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@4.0.so (BuildId: f47672d158e341b90e90cce7841c04) (load bias 0x1000)
+    00007086'9c3f5000-00007086'9c3f7fff r--     23000      3000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@4.0.so (BuildId: f47672d158e341b90e90cce7841c04) (load bias 0x1000)
+    00007086'9c3f8000-00007086'9c3f8fff rw-     25000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@4.0.so (BuildId: f47672d158e341b90e90cce7841c04) (load bias 0x1000)
+    00007086'9c417000-00007086'9c418fff r--         0      2000  /system/lib64/libdexfile_support.so (BuildId: 70bed99ef1ffd064425f87e9e0ba4e) (load bias 0x1000)
+    00007086'9c419000-00007086'9c419fff r-x      1000      1000  /system/lib64/libdexfile_support.so (BuildId: 70bed99ef1ffd064425f87e9e0ba4e) (load bias 0x1000)
+    00007086'9c41a000-00007086'9c41afff r--      1000      1000  /system/lib64/libdexfile_support.so (BuildId: 70bed99ef1ffd064425f87e9e0ba4e) (load bias 0x1000)
+    00007086'9c41b000-00007086'9c41bfff rw-      1000      1000  /system/lib64/libdexfile_support.so (BuildId: 70bed99ef1ffd064425f87e9e0ba4e) (load bias 0x1000)
+    00007086'9c442000-00007086'9c45afff r--         0     19000  /apex/com.android.media.swcodec/lib64/android.hardware.media.bufferpool@2.0.so (BuildId: 90079d6fd6ce46604bb0bd8389e543) (load bias 0x1000)
+    00007086'9c45b000-00007086'9c478fff r-x     18000     1e000  /apex/com.android.media.swcodec/lib64/android.hardware.media.bufferpool@2.0.so (BuildId: 90079d6fd6ce46604bb0bd8389e543) (load bias 0x1000)
+    00007086'9c479000-00007086'9c47efff r--     35000      6000  /apex/com.android.media.swcodec/lib64/android.hardware.media.bufferpool@2.0.so (BuildId: 90079d6fd6ce46604bb0bd8389e543) (load bias 0x1000)
+    00007086'9c47f000-00007086'9c47ffff rw-     3a000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.media.bufferpool@2.0.so (BuildId: 90079d6fd6ce46604bb0bd8389e543) (load bias 0x1000)
+    00007086'9c486000-00007086'9c492fff r--         0      d000  /system/lib64/libbacktrace.so (BuildId: 2817aebd8624f83de9be14ee07cf2f) (load bias 0x1000)
+    00007086'9c493000-00007086'9c4adfff r-x      c000     1b000  /system/lib64/libbacktrace.so (BuildId: 2817aebd8624f83de9be14ee07cf2f) (load bias 0x1000)
+    00007086'9c4ae000-00007086'9c4b1fff r--     26000      4000  /system/lib64/libbacktrace.so (BuildId: 2817aebd8624f83de9be14ee07cf2f) (load bias 0x1000)
+    00007086'9c4b2000-00007086'9c4b2fff rw-     29000      1000  /system/lib64/libbacktrace.so (BuildId: 2817aebd8624f83de9be14ee07cf2f) (load bias 0x1000)
+    00007086'9c4d3000-00007086'9c4dffff r--         0      d000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@3.0.so (BuildId: eabe512fffee3623cf8231da430238) (load bias 0x1000)
+    00007086'9c4e0000-00007086'9c4eefff r-x      c000      f000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@3.0.so (BuildId: eabe512fffee3623cf8231da430238) (load bias 0x1000)
+    00007086'9c4ef000-00007086'9c4f1fff r--     1a000      3000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@3.0.so (BuildId: eabe512fffee3623cf8231da430238) (load bias 0x1000)
+    00007086'9c4f2000-00007086'9c4f2fff rw-     1c000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@3.0.so (BuildId: eabe512fffee3623cf8231da430238) (load bias 0x1000)
+    00007086'9c50b000-00007086'9c50bfff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.common-V1-ndk_platform.so (BuildId: 6ad13c9e346bf6cde19e19243296d3) (load bias 0x1000)
+    00007086'9c50c000-00007086'9c50dfff r-x         0      2000  /apex/com.android.media.swcodec/lib64/android.hardware.common-V1-ndk_platform.so (BuildId: 6ad13c9e346bf6cde19e19243296d3) (load bias 0x1000)
+    00007086'9c50e000-00007086'9c50efff r--      1000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.common-V1-ndk_platform.so (BuildId: 6ad13c9e346bf6cde19e19243296d3) (load bias 0x1000)
+    00007086'9c50f000-00007086'9c50ffff rw-      1000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.common-V1-ndk_platform.so (BuildId: 6ad13c9e346bf6cde19e19243296d3) (load bias 0x1000)
+    00007086'9c553000-00007086'9c553fff r--         0      1000  /system/lib64/libandroid_runtime_lazy.so (BuildId: 149f0e2b52775e27c23041652fdc05) (load bias 0x1000)
+    00007086'9c554000-00007086'9c554fff r-x         0      1000  /system/lib64/libandroid_runtime_lazy.so (BuildId: 149f0e2b52775e27c23041652fdc05) (load bias 0x1000)
+    00007086'9c555000-00007086'9c555fff r--         0      1000  /system/lib64/libandroid_runtime_lazy.so (BuildId: 149f0e2b52775e27c23041652fdc05) (load bias 0x1000)
+    00007086'9c556000-00007086'9c556fff rw-         0      1000  /system/lib64/libandroid_runtime_lazy.so (BuildId: 149f0e2b52775e27c23041652fdc05) (load bias 0x1000)
+    00007086'9c589000-00007086'9c5d9fff r--         0     51000  /system/lib64/libbinder.so (BuildId: 5fc482c25a7d9cfc2cefed2e8861db) (load bias 0x1000)
+    00007086'9c5da000-00007086'9c622fff r-x     50000     49000  /system/lib64/libbinder.so (BuildId: 5fc482c25a7d9cfc2cefed2e8861db) (load bias 0x1000)
+    00007086'9c623000-00007086'9c635fff r--     98000     13000  /system/lib64/libbinder.so (BuildId: 5fc482c25a7d9cfc2cefed2e8861db) (load bias 0x1000)
+    00007086'9c636000-00007086'9c637fff rw-     aa000      2000  /system/lib64/libbinder.so (BuildId: 5fc482c25a7d9cfc2cefed2e8861db) (load bias 0x1000)
+    00007086'9c655000-00007086'9c677fff r--         0     23000  /apex/com.android.runtime/lib64/bionic/libm.so (BuildId: 58d2fa60dcbeae9a85160c5cf3a3c8) (load bias 0x1000)
+    00007086'9c678000-00007086'9c6a0fff r-x     22000     29000  /apex/com.android.runtime/lib64/bionic/libm.so (BuildId: 58d2fa60dcbeae9a85160c5cf3a3c8) (load bias 0x1000)
+    00007086'9c6a1000-00007086'9c6a2fff r--     4a000      2000  /apex/com.android.runtime/lib64/bionic/libm.so (BuildId: 58d2fa60dcbeae9a85160c5cf3a3c8) (load bias 0x1000)
+    00007086'9c6a3000-00007086'9c6a3fff rw-     4b000      1000  /apex/com.android.runtime/lib64/bionic/libm.so (BuildId: 58d2fa60dcbeae9a85160c5cf3a3c8) (load bias 0x1000)
+    00007086'9c6ed000-00007086'9c6f3fff r--         0      7000  /system/lib64/libgraphicsenv.so (BuildId: 2af58503cb2f4a433393e114360389) (load bias 0x1000)
+    00007086'9c6f4000-00007086'9c6f8fff r-x      6000      5000  /system/lib64/libgraphicsenv.so (BuildId: 2af58503cb2f4a433393e114360389) (load bias 0x1000)
+    00007086'9c6f9000-00007086'9c6fafff r--      a000      2000  /system/lib64/libgraphicsenv.so (BuildId: 2af58503cb2f4a433393e114360389) (load bias 0x1000)
+    00007086'9c6fb000-00007086'9c6fcfff rw-      b000      2000  /system/lib64/libgraphicsenv.so (BuildId: 2af58503cb2f4a433393e114360389) (load bias 0x1000)
+    00007086'9c73d000-00007086'9c73dfff r--         0      1000  /system/lib64/android.hardware.graphics.common@1.1.so (BuildId: 51aee6f20da92acbe1627f70440b40) (load bias 0x1000)
+    00007086'9c73e000-00007086'9c73efff r-x         0      1000  /system/lib64/android.hardware.graphics.common@1.1.so (BuildId: 51aee6f20da92acbe1627f70440b40) (load bias 0x1000)
+    00007086'9c73f000-00007086'9c73ffff r--         0      1000  /system/lib64/android.hardware.graphics.common@1.1.so (BuildId: 51aee6f20da92acbe1627f70440b40) (load bias 0x1000)
+    00007086'9c743000-00007086'9c759fff r--         0     17000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.bufferqueue@2.0.so (BuildId: b987e8844318e53add10911e0375ad) (load bias 0x1000)
+    00007086'9c75a000-00007086'9c779fff r-x     16000     20000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.bufferqueue@2.0.so (BuildId: b987e8844318e53add10911e0375ad) (load bias 0x1000)
+    00007086'9c77a000-00007086'9c77dfff r--     35000      4000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.bufferqueue@2.0.so (BuildId: b987e8844318e53add10911e0375ad) (load bias 0x1000)
+    00007086'9c77e000-00007086'9c77efff rw-     38000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.bufferqueue@2.0.so (BuildId: b987e8844318e53add10911e0375ad) (load bias 0x1000)
+    00007086'9c782000-00007086'9c7d2fff r--         0     51000  /system/lib64/libc++.so (BuildId: f6b9efbc6d03f01d073cac072b6671) (load bias 0x1000)
+    00007086'9c7d3000-00007086'9c832fff r-x     50000     60000  /system/lib64/libc++.so (BuildId: f6b9efbc6d03f01d073cac072b6671) (load bias 0x1000)
+    00007086'9c833000-00007086'9c839fff r--     af000      7000  /system/lib64/libc++.so (BuildId: f6b9efbc6d03f01d073cac072b6671) (load bias 0x1000)
+    00007086'9c83a000-00007086'9c83afff rw-     b5000      1000  /system/lib64/libc++.so (BuildId: f6b9efbc6d03f01d073cac072b6671) (load bias 0x1000)
+    00007086'9c83b000-00007086'9c83dfff rw-         0      3000
+    00007086'9c859000-00007086'9c863fff r--         0      b000  /system/lib64/android.hardware.graphics.allocator@2.0.so (BuildId: 0327b83143f77dd8ba66e8c905f640) (load bias 0x1000)
+    00007086'9c864000-00007086'9c86dfff r-x      a000      a000  /system/lib64/android.hardware.graphics.allocator@2.0.so (BuildId: 0327b83143f77dd8ba66e8c905f640) (load bias 0x1000)
+    00007086'9c86e000-00007086'9c870fff r--     13000      3000  /system/lib64/android.hardware.graphics.allocator@2.0.so (BuildId: 0327b83143f77dd8ba66e8c905f640) (load bias 0x1000)
+    00007086'9c871000-00007086'9c871fff rw-     15000      1000  /system/lib64/android.hardware.graphics.allocator@2.0.so (BuildId: 0327b83143f77dd8ba66e8c905f640) (load bias 0x1000)
+    00007086'9c88c000-00007086'9c88cfff r--         0      1000  /apex/com.android.runtime/lib64/bionic/libdl_android.so (BuildId: 4dd58f6e6df0de811e48f7315746f1) (load bias 0x1000)
+    00007086'9c88d000-00007086'9c88dfff r-x         0      1000  /apex/com.android.runtime/lib64/bionic/libdl_android.so (BuildId: 4dd58f6e6df0de811e48f7315746f1) (load bias 0x1000)
+    00007086'9c88e000-00007086'9c88efff r--         0      1000  /apex/com.android.runtime/lib64/bionic/libdl_android.so (BuildId: 4dd58f6e6df0de811e48f7315746f1) (load bias 0x1000)
+    00007086'9c8c0000-00007086'9c911fff r--         0     52000  /apex/com.android.media.swcodec/lib64/libc++.so (BuildId: cf1ec24c25c6be2dfc6817e612a7a0) (load bias 0x1000)
+    00007086'9c912000-00007086'9c974fff r-x     51000     63000  /apex/com.android.media.swcodec/lib64/libc++.so (BuildId: cf1ec24c25c6be2dfc6817e612a7a0) (load bias 0x1000)
+    00007086'9c975000-00007086'9c97bfff r--     b3000      7000  /apex/com.android.media.swcodec/lib64/libc++.so (BuildId: cf1ec24c25c6be2dfc6817e612a7a0) (load bias 0x1000)
+    00007086'9c97c000-00007086'9c97cfff rw-     b9000      1000  /apex/com.android.media.swcodec/lib64/libc++.so (BuildId: cf1ec24c25c6be2dfc6817e612a7a0) (load bias 0x1000)
+    00007086'9c97d000-00007086'9c97ffff rw-         0      3000
+    00007086'9c9a4000-00007086'9c9f5fff r--         0     52000  /system/lib64/libhidlbase.so (BuildId: 96ae0204cac145d61cc62694efc65a) (load bias 0x1000)
+    00007086'9c9f6000-00007086'9ca70fff r-x     51000     7b000  /system/lib64/libhidlbase.so (BuildId: 96ae0204cac145d61cc62694efc65a) (load bias 0x1000)
+    00007086'9ca71000-00007086'9ca7cfff r--     cb000      c000  /system/lib64/libhidlbase.so (BuildId: 96ae0204cac145d61cc62694efc65a) (load bias 0x1000)
+    00007086'9ca7d000-00007086'9ca7dfff rw-     d6000      1000  /system/lib64/libhidlbase.so (BuildId: 96ae0204cac145d61cc62694efc65a) (load bias 0x1000)
+    00007086'9ca7e000-00007086'9ca7efff rw-         0      1000
+    00007086'9ca80000-00007086'9caa6fff r--         0     27000  /system/lib64/libui.so (BuildId: f9a95ab2b36a294c1204d3927acf89) (load bias 0x1000)
+    00007086'9caa7000-00007086'9cac9fff r-x     26000     23000  /system/lib64/libui.so (BuildId: f9a95ab2b36a294c1204d3927acf89) (load bias 0x1000)
+    00007086'9caca000-00007086'9caccfff r--     48000      3000  /system/lib64/libui.so (BuildId: f9a95ab2b36a294c1204d3927acf89) (load bias 0x1000)
+    00007086'9cacd000-00007086'9cacdfff rw-     4a000      1000  /system/lib64/libui.so (BuildId: f9a95ab2b36a294c1204d3927acf89) (load bias 0x1000)
+    00007086'9cace000-00007086'9cacffff rw-         0      2000
+    00007086'9cb1c000-00007086'9cb35fff r--         0     1a000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.bufferqueue@1.0.so (BuildId: 941228f1aada08444a46e123c6e8ca) (load bias 0x1000)
+    00007086'9cb36000-00007086'9cb5afff r-x     19000     25000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.bufferqueue@1.0.so (BuildId: 941228f1aada08444a46e123c6e8ca) (load bias 0x1000)
+    00007086'9cb5b000-00007086'9cb5ffff r--     3d000      5000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.bufferqueue@1.0.so (BuildId: 941228f1aada08444a46e123c6e8ca) (load bias 0x1000)
+    00007086'9cb60000-00007086'9cb60fff rw-     41000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.bufferqueue@1.0.so (BuildId: 941228f1aada08444a46e123c6e8ca) (load bias 0x1000)
+    00007086'9cb87000-00007086'9cbc3fff r--         0     3d000  /apex/com.android.media.swcodec/lib64/android.hardware.media.c2@1.0.so (BuildId: db741d049dee7ec653a25f9a49bf51) (load bias 0x1000)
+    00007086'9cbc4000-00007086'9cc23fff r-x     3c000     60000  /apex/com.android.media.swcodec/lib64/android.hardware.media.c2@1.0.so (BuildId: db741d049dee7ec653a25f9a49bf51) (load bias 0x1000)
+    00007086'9cc24000-00007086'9cc2ffff r--     9b000      c000  /apex/com.android.media.swcodec/lib64/android.hardware.media.c2@1.0.so (BuildId: db741d049dee7ec653a25f9a49bf51) (load bias 0x1000)
+    00007086'9cc30000-00007086'9cc30fff rw-     a6000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.media.c2@1.0.so (BuildId: db741d049dee7ec653a25f9a49bf51) (load bias 0x1000)
+    00007086'9cc55000-00007086'9cc6efff r--         0     1a000  /system/lib64/libprocessgroup.so (BuildId: c1f6de04cdd6dc577bb6574dad04e3) (load bias 0x1000)
+    00007086'9cc6f000-00007086'9cc98fff r-x     19000     2a000  /system/lib64/libprocessgroup.so (BuildId: c1f6de04cdd6dc577bb6574dad04e3) (load bias 0x1000)
+    00007086'9cc99000-00007086'9cc9bfff r--     42000      3000  /system/lib64/libprocessgroup.so (BuildId: c1f6de04cdd6dc577bb6574dad04e3) (load bias 0x1000)
+    00007086'9cc9c000-00007086'9cc9cfff rw-     44000      1000  /system/lib64/libprocessgroup.so (BuildId: c1f6de04cdd6dc577bb6574dad04e3) (load bias 0x1000)
+    00007086'9ccce000-00007086'9cd12fff r--         0     45000  /apex/com.android.media.swcodec/lib64/libcodec2_vndk.so (BuildId: a4584b39170305bfda2eb6b013bc37) (load bias 0x1000)
+    00007086'9cd13000-00007086'9cd6afff r-x     44000     58000  /apex/com.android.media.swcodec/lib64/libcodec2_vndk.so (BuildId: a4584b39170305bfda2eb6b013bc37) (load bias 0x1000)
+    00007086'9cd6b000-00007086'9cd6efff r--     9b000      4000  /apex/com.android.media.swcodec/lib64/libcodec2_vndk.so (BuildId: a4584b39170305bfda2eb6b013bc37) (load bias 0x1000)
+    00007086'9cd6f000-00007086'9cd6ffff rw-     9e000      1000  /apex/com.android.media.swcodec/lib64/libcodec2_vndk.so (BuildId: a4584b39170305bfda2eb6b013bc37) (load bias 0x1000)
+    00007086'9cd95000-00007086'9cde6fff r--         0     52000  /apex/com.android.media.swcodec/lib64/libhidlbase.so (BuildId: 789c6362857f00ac8e5c4ed5169e139f) (load bias 0x1000)
+    00007086'9cde7000-00007086'9ce61fff r-x     51000     7b000  /apex/com.android.media.swcodec/lib64/libhidlbase.so (BuildId: 789c6362857f00ac8e5c4ed5169e139f) (load bias 0x1000)
+    00007086'9ce62000-00007086'9ce6dfff r--     cb000      c000  /apex/com.android.media.swcodec/lib64/libhidlbase.so (BuildId: 789c6362857f00ac8e5c4ed5169e13) (load bias 0x1000)
+    00007086'9ce6e000-00007086'9ce6efff rw-     d6000      1000  /apex/com.android.media.swcodec/lib64/libhidlbase.so (BuildId: 789c6362857f00ac8e5c4ed5169e13) (load bias 0x1000)
+    00007086'9ce6f000-00007086'9ce6ffff rw-         0      1000
+    00007086'9cead000-00007086'9ceadfff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common@1.0.so (BuildId: 861180ed633244e46f577acc48acf6) (load bias 0x1000)
+    00007086'9ceae000-00007086'9ceaefff r-x         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common@1.0.so (BuildId: 861180ed633244e46f577acc48acf6) (load bias 0x1000)
+    00007086'9ceaf000-00007086'9ceaffff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common@1.0.so (BuildId: 861180ed633244e46f577acc48acf6) (load bias 0x1000)
+    00007086'9cee0000-00007086'9cee0fff r--         0      1000  /system/lib64/libsync.so (BuildId: 503dc951bb82e7873675ce1b72ae67) (load bias 0x1000)
+    00007086'9cee1000-00007086'9cee2fff r-x         0      2000  /system/lib64/libsync.so (BuildId: 503dc951bb82e7873675ce1b72ae67) (load bias 0x1000)
+    00007086'9cee3000-00007086'9cee3fff r--      1000      1000  /system/lib64/libsync.so (BuildId: 503dc951bb82e7873675ce1b72ae67) (load bias 0x1000)
+    00007086'9cee4000-00007086'9cee4fff rw-      1000      1000  /system/lib64/libsync.so (BuildId: 503dc951bb82e7873675ce1b72ae67) (load bias 0x1000)
+    00007086'9cf15000-00007086'9cf21fff r--         0      d000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@2.1.so (BuildId: 92131aba57698bcc3bb74f4384a426) (load bias 0x1000)
+    00007086'9cf22000-00007086'9cf2dfff r-x      c000      c000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@2.1.so (BuildId: 92131aba57698bcc3bb74f4384a426) (load bias 0x1000)
+    00007086'9cf2e000-00007086'9cf30fff r--     17000      3000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@2.1.so (BuildId: 92131aba57698bcc3bb74f4384a426) (load bias 0x1000)
+    00007086'9cf31000-00007086'9cf31fff rw-     19000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@2.1.so (BuildId: 92131aba57698bcc3bb74f4384a426) (load bias 0x1000)
+    00007086'9cf52000-00007086'9cf61fff r--         0     10000  /apex/com.android.media.swcodec/lib64/android.hidl.memory@1.0.so (BuildId: c5b156d58f67215613fed412e07a0b) (load bias 0x1000)
+    00007086'9cf62000-00007086'9cf74fff r-x      f000     13000  /apex/com.android.media.swcodec/lib64/android.hidl.memory@1.0.so (BuildId: c5b156d58f67215613fed412e07a0b) (load bias 0x1000)
+    00007086'9cf75000-00007086'9cf77fff r--     21000      3000  /apex/com.android.media.swcodec/lib64/android.hidl.memory@1.0.so (BuildId: c5b156d58f67215613fed412e07a0b) (load bias 0x1000)
+    00007086'9cf78000-00007086'9cf78fff rw-     23000      1000  /apex/com.android.media.swcodec/lib64/android.hidl.memory@1.0.so (BuildId: c5b156d58f67215613fed412e07a0b) (load bias 0x1000)
+    00007086'9cfb1000-00007086'9cfb1fff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.media@1.0.so (BuildId: f68473f7b9ff5cabcd7fd7c2b440a2) (load bias 0x1000)
+    00007086'9cfb2000-00007086'9cfb2fff r-x         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.media@1.0.so (BuildId: f68473f7b9ff5cabcd7fd7c2b440a2) (load bias 0x1000)
+    00007086'9cfb3000-00007086'9cfb3fff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.media@1.0.so (BuildId: f68473f7b9ff5cabcd7fd7c2b440a2) (load bias 0x1000)
+    00007086'9cfc6000-00007086'9cfc6fff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common@1.2.so (BuildId: f7cb4372e92e8412c6faf0e0a5a664) (load bias 0x1000)
+    00007086'9cfc7000-00007086'9cfc7fff r-x         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common@1.2.so (BuildId: f7cb4372e92e8412c6faf0e0a5a664) (load bias 0x1000)
+    00007086'9cfc8000-00007086'9cfc8fff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common@1.2.so (BuildId: f7cb4372e92e8412c6faf0e0a5a664) (load bias 0x1000)
+    00007086'9d002000-00007086'9d003fff r--         0      2000  /apex/com.android.media.swcodec/lib64/android.hidl.token@1.0-utils.so (BuildId: 70d80cfea69cdafd0261aec177594a) (load bias 0x1000)
+    00007086'9d004000-00007086'9d004fff r-x      1000      1000  /apex/com.android.media.swcodec/lib64/android.hidl.token@1.0-utils.so (BuildId: 70d80cfea69cdafd0261aec177594a) (load bias 0x1000)
+    00007086'9d005000-00007086'9d006fff r--      1000      2000  /apex/com.android.media.swcodec/lib64/android.hidl.token@1.0-utils.so (BuildId: 70d80cfea69cdafd0261aec177594a) (load bias 0x1000)
+    00007086'9d007000-00007086'9d007fff rw-      2000      1000  /apex/com.android.media.swcodec/lib64/android.hidl.token@1.0-utils.so (BuildId: 70d80cfea69cdafd0261aec177594a) (load bias 0x1000)
+    00007086'9d057000-00007086'9d05efff r--         0      8000  /system/lib64/libcutils.so (BuildId: 87e96da4b8b5de121e507d1533e278) (load bias 0x1000)
+    00007086'9d05f000-00007086'9d067fff r-x      7000      9000  /system/lib64/libcutils.so (BuildId: 87e96da4b8b5de121e507d1533e278) (load bias 0x1000)
+    00007086'9d068000-00007086'9d069fff r--      f000      2000  /system/lib64/libcutils.so (BuildId: 87e96da4b8b5de121e507d1533e278) (load bias 0x1000)
+    00007086'9d06a000-00007086'9d06afff rw-     10000      1000  /system/lib64/libcutils.so (BuildId: 87e96da4b8b5de121e507d1533e278) (load bias 0x1000)
+    00007086'9d083000-00007086'9d0c4fff r--         0     42000  /apex/com.android.runtime/lib64/bionic/libc.so (BuildId: 367a43aefd68123bf118851437b2730e) (load bias 0x1000)
+    00007086'9d0c5000-00007086'9d150fff r-x     41000     8c000  /apex/com.android.runtime/lib64/bionic/libc.so (BuildId: 367a43aefd68123bf118851437b2730e) (load bias 0x1000)
+    00007086'9d151000-00007086'9d155fff r--     cc000      5000  /apex/com.android.runtime/lib64/bionic/libc.so (BuildId: 367a43aefd68123bf118851437b273) (load bias 0x1000)
+    00007086'9d156000-00007086'9d157fff rw-     d0000      2000  /apex/com.android.runtime/lib64/bionic/libc.so (BuildId: 367a43aefd68123bf118851437b273) (load bias 0x1000)
+    00007086'9d158000-00007086'9d15afff rw-         0      3000
+    00007086'9d15b000-00007086'9d15bfff r--         0      1000
+    00007086'9d15c000-00007086'9d178fff rw-         0     1d000
+    00007086'9d188000-00007086'9d198fff r--         0     11000  /apex/com.android.media.swcodec/lib64/libminijail.so (BuildId: ac9c93259ccebb9d1de28473f0b214) (load bias 0x1000)
+    00007086'9d199000-00007086'9d1a3fff r-x     10000      b000  /apex/com.android.media.swcodec/lib64/libminijail.so (BuildId: ac9c93259ccebb9d1de28473f0b214) (load bias 0x1000)
+    00007086'9d1a4000-00007086'9d1adfff r--     1a000      a000  /apex/com.android.media.swcodec/lib64/libminijail.so (BuildId: ac9c93259ccebb9d1de28473f0b214) (load bias 0x1000)
+    00007086'9d1ae000-00007086'9d1affff rw-     23000      2000  /apex/com.android.media.swcodec/lib64/libminijail.so (BuildId: ac9c93259ccebb9d1de28473f0b214) (load bias 0x1000)
+    00007086'9d1fa000-00007086'9d1fafff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hidl.safe_union@1.0.so (BuildId: 6febf4aa0fe89fd21bfbc1be692c2a) (load bias 0x1000)
+    00007086'9d1fb000-00007086'9d1fbfff r-x         0      1000  /apex/com.android.media.swcodec/lib64/android.hidl.safe_union@1.0.so (BuildId: 6febf4aa0fe89fd21bfbc1be692c2a) (load bias 0x1000)
+    00007086'9d1fc000-00007086'9d1fcfff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hidl.safe_union@1.0.so (BuildId: 6febf4aa0fe89fd21bfbc1be692c2a) (load bias 0x1000)
+    00007086'9d218000-00007086'9d223fff r--         0      c000  /system/lib64/android.hardware.graphics.mapper@2.0.so (BuildId: ff4d854463ac5e075e0b60afdce817) (load bias 0x1000)
+    00007086'9d224000-00007086'9d230fff r-x      b000      d000  /system/lib64/android.hardware.graphics.mapper@2.0.so (BuildId: ff4d854463ac5e075e0b60afdce817) (load bias 0x1000)
+    00007086'9d231000-00007086'9d232fff r--     17000      2000  /system/lib64/android.hardware.graphics.mapper@2.0.so (BuildId: ff4d854463ac5e075e0b60afdce817) (load bias 0x1000)
+    00007086'9d233000-00007086'9d233fff rw-     18000      1000  /system/lib64/android.hardware.graphics.mapper@2.0.so (BuildId: ff4d854463ac5e075e0b60afdce817) (load bias 0x1000)
+    00007086'9d264000-00007086'9d265fff r--         0      2000  /apex/com.android.media.swcodec/lib64/libcap.so (BuildId: 2391e85d5c5734df6bd00a434fab13) (load bias 0x1000)
+    00007086'9d266000-00007086'9d268fff r-x      1000      3000  /apex/com.android.media.swcodec/lib64/libcap.so (BuildId: 2391e85d5c5734df6bd00a434fab13) (load bias 0x1000)
+    00007086'9d269000-00007086'9d269fff r--      3000      1000  /apex/com.android.media.swcodec/lib64/libcap.so (BuildId: 2391e85d5c5734df6bd00a434fab13) (load bias 0x1000)
+    00007086'9d26a000-00007086'9d26afff rw-      3000      1000  /apex/com.android.media.swcodec/lib64/libcap.so (BuildId: 2391e85d5c5734df6bd00a434fab13) (load bias 0x1000)
+    00007086'9d287000-00007086'9d287fff r--         0      1000  /system/lib64/android.hardware.configstore-utils.so (BuildId: 6434ec62031227568cc5ed4640cd99) (load bias 0x1000)
+    00007086'9d288000-00007086'9d289fff r-x         0      2000  /system/lib64/android.hardware.configstore-utils.so (BuildId: 6434ec62031227568cc5ed4640cd99) (load bias 0x1000)
+    00007086'9d28a000-00007086'9d28afff r--      1000      1000  /system/lib64/android.hardware.configstore-utils.so (BuildId: 6434ec62031227568cc5ed4640cd99) (load bias 0x1000)
+    00007086'9d2f2000-00007086'9d2f3fff r--         0      2000  /apex/com.android.media.swcodec/lib64/libavservices_minijail.so (BuildId: b19963820162e98740755b1d222160) (load bias 0x1000)
+    00007086'9d2f4000-00007086'9d2f5fff r-x      1000      2000  /apex/com.android.media.swcodec/lib64/libavservices_minijail.so (BuildId: b19963820162e98740755b1d222160) (load bias 0x1000)
+    00007086'9d2f6000-00007086'9d2f6fff r--      2000      1000  /apex/com.android.media.swcodec/lib64/libavservices_minijail.so (BuildId: b19963820162e98740755b1d222160) (load bias 0x1000)
+    00007086'9d30a000-00007086'9d338fff r--         0     2f000  /apex/com.android.media.swcodec/lib64/android.hardware.media.omx@1.0.so (BuildId: 3ef17b3ba0f731d1103318d86a3f67) (load bias 0x1000)
+    00007086'9d339000-00007086'9d386fff r-x     2e000     4e000  /apex/com.android.media.swcodec/lib64/android.hardware.media.omx@1.0.so (BuildId: 3ef17b3ba0f731d1103318d86a3f67) (load bias 0x1000)
+    00007086'9d387000-00007086'9d38ffff r--     7b000      9000  /apex/com.android.media.swcodec/lib64/android.hardware.media.omx@1.0.so (BuildId: 3ef17b3ba0f731d1103318d86a3f67) (load bias 0x1000)
+    00007086'9d390000-00007086'9d390fff rw-     83000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.media.omx@1.0.so (BuildId: 3ef17b3ba0f731d1103318d86a3f67) (load bias 0x1000)
+    00007086'9d3d8000-00007086'9d3e0fff r--         0      9000  /system/lib64/libbinder_ndk.so (BuildId: 8801d11757dc5c86f521a3185b39f0) (load bias 0x1000)
+    00007086'9d3e1000-00007086'9d3e8fff r-x      8000      8000  /system/lib64/libbinder_ndk.so (BuildId: 8801d11757dc5c86f521a3185b39f0) (load bias 0x1000)
+    00007086'9d3e9000-00007086'9d3eafff r--      f000      2000  /system/lib64/libbinder_ndk.so (BuildId: 8801d11757dc5c86f521a3185b39f0) (load bias 0x1000)
+    00007086'9d3eb000-00007086'9d3ebfff rw-     10000      1000  /system/lib64/libbinder_ndk.so (BuildId: 8801d11757dc5c86f521a3185b39f0) (load bias 0x1000)
+    00007086'9d426000-00007086'9d42dfff r--         0      8000  /system/lib64/libgralloctypes.so (BuildId: 7d8537163e3699dedcf0e8731ca427) (load bias 0x1000)
+    00007086'9d42e000-00007086'9d438fff r-x      7000      b000  /system/lib64/libgralloctypes.so (BuildId: 7d8537163e3699dedcf0e8731ca427) (load bias 0x1000)
+    00007086'9d439000-00007086'9d439fff r--     11000      1000  /system/lib64/libgralloctypes.so (BuildId: 7d8537163e3699dedcf0e8731ca427) (load bias 0x1000)
+    00007086'9d43a000-00007086'9d43afff rw-     11000      1000  /system/lib64/libgralloctypes.so (BuildId: 7d8537163e3699dedcf0e8731ca427) (load bias 0x1000)
+    00007086'9d43b000-00007086'9d43bfff rw-         0      1000
+    00007086'9d457000-00007086'9d457fff r--         0      1000  /apex/com.android.runtime/lib64/bionic/libdl.so (BuildId: 61f35ee4161de100ac5723b17fb1ef) (load bias 0x1000)
+    00007086'9d458000-00007086'9d458fff r-x         0      1000  /apex/com.android.runtime/lib64/bionic/libdl.so (BuildId: 61f35ee4161de100ac5723b17fb1ef) (load bias 0x1000)
+    00007086'9d459000-00007086'9d459fff r--         0      1000  /apex/com.android.runtime/lib64/bionic/libdl.so (BuildId: 61f35ee4161de100ac5723b17fb1ef) (load bias 0x1000)
+    00007086'9d45a000-00007086'9d45afff ---         0      1000
+    00007086'9d45b000-00007086'9d45bfff r--         0      1000
+    00007086'9d48e000-00007086'9d497fff r--         0      a000  /apex/com.android.media.swcodec/lib64/android.hidl.memory.token@1.0.so (BuildId: dfae7deaf3301e7e145c68cac5f489) (load bias 0x1000)
+    00007086'9d498000-00007086'9d4a0fff r-x      9000      9000  /apex/com.android.media.swcodec/lib64/android.hidl.memory.token@1.0.so (BuildId: dfae7deaf3301e7e145c68cac5f489) (load bias 0x1000)
+    00007086'9d4a1000-00007086'9d4a3fff r--     11000      3000  /apex/com.android.media.swcodec/lib64/android.hidl.memory.token@1.0.so (BuildId: dfae7deaf3301e7e145c68cac5f489) (load bias 0x1000)
+    00007086'9d4a4000-00007086'9d4a4fff rw-     13000      1000  /apex/com.android.media.swcodec/lib64/android.hidl.memory.token@1.0.so (BuildId: dfae7deaf3301e7e145c68cac5f489) (load bias 0x1000)
+    00007086'9d4c3000-00007086'9d4cefff r--         0      c000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@2.0.so (BuildId: d7154e589b736540ab2aa5f7fc3c5e) (load bias 0x1000)
+    00007086'9d4cf000-00007086'9d4dbfff r-x      b000      d000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@2.0.so (BuildId: d7154e589b736540ab2aa5f7fc3c5e) (load bias 0x1000)
+    00007086'9d4dc000-00007086'9d4ddfff r--     17000      2000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@2.0.so (BuildId: d7154e589b736540ab2aa5f7fc3c5e) (load bias 0x1000)
+    00007086'9d4de000-00007086'9d4defff rw-     18000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.mapper@2.0.so (BuildId: d7154e589b736540ab2aa5f7fc3c5e) (load bias 0x1000)
+    00007086'9d505000-00007086'9d51efff r--         0     1a000  /apex/com.android.media.swcodec/lib64/libprocessgroup.so (BuildId: 6a49602b03c1d1ab8f43cd3099593d) (load bias 0x1000)
+    00007086'9d51f000-00007086'9d548fff r-x     19000     2a000  /apex/com.android.media.swcodec/lib64/libprocessgroup.so (BuildId: 6a49602b03c1d1ab8f43cd3099593d) (load bias 0x1000)
+    00007086'9d549000-00007086'9d54bfff r--     42000      3000  /apex/com.android.media.swcodec/lib64/libprocessgroup.so (BuildId: 6a49602b03c1d1ab8f43cd3099593d) (load bias 0x1000)
+    00007086'9d54c000-00007086'9d54cfff rw-     44000      1000  /apex/com.android.media.swcodec/lib64/libprocessgroup.so (BuildId: 6a49602b03c1d1ab8f43cd3099593d) (load bias 0x1000)
+    00007086'9d553000-00007086'9d5b6fff rw-         0     64000
+    00007086'9d5b7000-00007086'9d5b7fff r--         0      1000  /apex/com.android.media.swcodec/lib64/libc_scudo.so (BuildId: a45b6d6fbf83d4e99bd50e6e703d00) (load bias 0x1000)
+    00007086'9d5b8000-00007086'9d5b8fff r-x         0      1000  /apex/com.android.media.swcodec/lib64/libc_scudo.so (BuildId: a45b6d6fbf83d4e99bd50e6e703d00) (load bias 0x1000)
+    00007086'9d5b9000-00007086'9d5b9fff r--         0      1000  /apex/com.android.media.swcodec/lib64/libc_scudo.so (BuildId: a45b6d6fbf83d4e99bd50e6e703d00) (load bias 0x1000)
+    00007086'9d5e2000-00007086'9d5e3fff r--         0      2000  /system/lib64/libnativebridge_lazy.so (BuildId: 0dd01fb5fa89cdf3213cc1b49afbb5) (load bias 0x1000)
+    00007086'9d5e4000-00007086'9d5e4fff r-x      1000      1000  /system/lib64/libnativebridge_lazy.so (BuildId: 0dd01fb5fa89cdf3213cc1b49afbb5) (load bias 0x1000)
+    00007086'9d5e5000-00007086'9d5e5fff r--      1000      1000  /system/lib64/libnativebridge_lazy.so (BuildId: 0dd01fb5fa89cdf3213cc1b49afbb5) (load bias 0x1000)
+    00007086'9d5e6000-00007086'9d5e6fff rw-      1000      1000  /system/lib64/libnativebridge_lazy.so (BuildId: 0dd01fb5fa89cdf3213cc1b49afbb5) (load bias 0x1000)
+    00007086'9d617000-00007086'9d617fff r--         0      1000  /apex/com.android.media.swcodec/lib64/libhardware.so (BuildId: 858bb85f515bb62254b91903a6b0cb) (load bias 0x1000)
+    00007086'9d618000-00007086'9d619fff r-x         0      2000  /apex/com.android.media.swcodec/lib64/libhardware.so (BuildId: 858bb85f515bb62254b91903a6b0cb) (load bias 0x1000)
+    00007086'9d61a000-00007086'9d61afff r--      1000      1000  /apex/com.android.media.swcodec/lib64/libhardware.so (BuildId: 858bb85f515bb62254b91903a6b0cb) (load bias 0x1000)
+    00007086'9d642000-00007086'9d657fff r--         0     16000  /apex/com.android.media.swcodec/lib64/libstagefright_bufferpool@2.0.1.so (BuildId: 574a9316e74ced36e0c7e83fb1960d) (load bias 0x1000)
+    00007086'9d658000-00007086'9d66dfff r-x     15000     16000  /apex/com.android.media.swcodec/lib64/libstagefright_bufferpool@2.0.1.so (BuildId: 574a9316e74ced36e0c7e83fb1960d) (load bias 0x1000)
+    00007086'9d66e000-00007086'9d66ffff r--     2a000      2000  /apex/com.android.media.swcodec/lib64/libstagefright_bufferpool@2.0.1.so (BuildId: 574a9316e74ced36e0c7e83fb1960d) (load bias 0x1000)
+    00007086'9d670000-00007086'9d670fff rw-     2b000      1000  /apex/com.android.media.swcodec/lib64/libstagefright_bufferpool@2.0.1.so (BuildId: 574a9316e74ced36e0c7e83fb1960d) (load bias 0x1000)
+    00007086'9d6ae000-00007086'9d6affff r--         0      2000  /apex/com.android.media.swcodec/lib64/libfmq.so (BuildId: f1a71be97b847e1e04441a98b3174f) (load bias 0x1000)
+    00007086'9d6b0000-00007086'9d6b1fff r-x      1000      2000  /apex/com.android.media.swcodec/lib64/libfmq.so (BuildId: f1a71be97b847e1e04441a98b3174f) (load bias 0x1000)
+    00007086'9d6b2000-00007086'9d6b2fff r--      2000      1000  /apex/com.android.media.swcodec/lib64/libfmq.so (BuildId: f1a71be97b847e1e04441a98b3174f) (load bias 0x1000)
+    00007086'9d6e1000-00007086'9d6ebfff r--         0      b000  /system/lib64/android.hardware.graphics.allocator@3.0.so (BuildId: c1b4b898fe40efae7dacf586874593) (load bias 0x1000)
+    00007086'9d6ec000-00007086'9d6f5fff r-x      a000      a000  /system/lib64/android.hardware.graphics.allocator@3.0.so (BuildId: c1b4b898fe40efae7dacf586874593) (load bias 0x1000)
+    00007086'9d6f6000-00007086'9d6f8fff r--     13000      3000  /system/lib64/android.hardware.graphics.allocator@3.0.so (BuildId: c1b4b898fe40efae7dacf586874593) (load bias 0x1000)
+    00007086'9d6f9000-00007086'9d6f9fff rw-     15000      1000  /system/lib64/android.hardware.graphics.allocator@3.0.so (BuildId: c1b4b898fe40efae7dacf586874593) (load bias 0x1000)
+    00007086'9d711000-00007086'9d711fff r--         0      1000  /system/lib64/libvndksupport.so (BuildId: e7c752fedaa7e19cb3215eca7d251b) (load bias 0x1000)
+    00007086'9d712000-00007086'9d712fff r-x         0      1000  /system/lib64/libvndksupport.so (BuildId: e7c752fedaa7e19cb3215eca7d251b) (load bias 0x1000)
+    00007086'9d713000-00007086'9d713fff r--         0      1000  /system/lib64/libvndksupport.so (BuildId: e7c752fedaa7e19cb3215eca7d251b) (load bias 0x1000)
+    00007086'9d714000-00007086'9d714fff rw-         0      1000  /system/lib64/libvndksupport.so (BuildId: e7c752fedaa7e19cb3215eca7d251b) (load bias 0x1000)
+    00007086'9d75a000-00007086'9d75ffff r--         0      6000  /system/lib64/liblog.so (BuildId: 8209228312a47a9d8fd4cc4e859b9b6d) (load bias 0x1000)
+    00007086'9d760000-00007086'9d76bfff r-x      5000      c000  /system/lib64/liblog.so (BuildId: 8209228312a47a9d8fd4cc4e859b9b6d) (load bias 0x1000)
+    00007086'9d76c000-00007086'9d76cfff r--     10000      1000  /system/lib64/liblog.so (BuildId: 8209228312a47a9d8fd4cc4e859b9b) (load bias 0x1000)
+    00007086'9d76d000-00007086'9d76dfff rw-     10000      1000  /system/lib64/liblog.so (BuildId: 8209228312a47a9d8fd4cc4e859b9b) (load bias 0x1000)
+    00007086'9d79f000-00007086'9d7adfff r--         0      f000  /system/lib64/android.hardware.configstore@1.1.so (BuildId: 2353e18dc1eefa1748d1192b0868c3) (load bias 0x1000)
+    00007086'9d7ae000-00007086'9d7bafff r-x      e000      d000  /system/lib64/android.hardware.configstore@1.1.so (BuildId: 2353e18dc1eefa1748d1192b0868c3) (load bias 0x1000)
+    00007086'9d7bb000-00007086'9d7bdfff r--     1a000      3000  /system/lib64/android.hardware.configstore@1.1.so (BuildId: 2353e18dc1eefa1748d1192b0868c3) (load bias 0x1000)
+    00007086'9d7be000-00007086'9d7befff rw-     1c000      1000  /system/lib64/android.hardware.configstore@1.1.so (BuildId: 2353e18dc1eefa1748d1192b0868c3) (load bias 0x1000)
+    00007086'9d7ec000-00007086'9d7ecfff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common@1.1.so (BuildId: f56547bd81c9354bb25743aaf02e54) (load bias 0x1000)
+    00007086'9d7ed000-00007086'9d7edfff r-x         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common@1.1.so (BuildId: f56547bd81c9354bb25743aaf02e54) (load bias 0x1000)
+    00007086'9d7ee000-00007086'9d7eefff r--         0      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.common@1.1.so (BuildId: f56547bd81c9354bb25743aaf02e54) (load bias 0x1000)
+    00007086'9d81b000-00007086'9d841fff r--         0     27000  /apex/com.android.media.swcodec/lib64/libui.so (BuildId: db90918546955e958ac413cf37160d) (load bias 0x1000)
+    00007086'9d842000-00007086'9d864fff r-x     26000     23000  /apex/com.android.media.swcodec/lib64/libui.so (BuildId: db90918546955e958ac413cf37160d) (load bias 0x1000)
+    00007086'9d865000-00007086'9d867fff r--     48000      3000  /apex/com.android.media.swcodec/lib64/libui.so (BuildId: db90918546955e958ac413cf37160d) (load bias 0x1000)
+    00007086'9d868000-00007086'9d868fff rw-     4a000      1000  /apex/com.android.media.swcodec/lib64/libui.so (BuildId: db90918546955e958ac413cf37160d) (load bias 0x1000)
+    00007086'9d869000-00007086'9d86afff rw-         0      2000
+    00007086'9d880000-00007086'9d88ffff r--         0     10000  /apex/com.android.media.swcodec/lib64/libutils.so (BuildId: 07bbeae7739cd6aee4073c62fdc09e) (load bias 0x1000)
+    00007086'9d890000-00007086'9d89cfff r-x      f000      d000  /apex/com.android.media.swcodec/lib64/libutils.so (BuildId: 07bbeae7739cd6aee4073c62fdc09e) (load bias 0x1000)
+    00007086'9d89d000-00007086'9d89efff r--     1b000      2000  /apex/com.android.media.swcodec/lib64/libutils.so (BuildId: 07bbeae7739cd6aee4073c62fdc09e) (load bias 0x1000)
+    00007086'9d89f000-00007086'9d89ffff rw-     1c000      1000  /apex/com.android.media.swcodec/lib64/libutils.so (BuildId: 07bbeae7739cd6aee4073c62fdc09e) (load bias 0x1000)
+    00007086'9d8cb000-00007086'9d8e6fff r--         0     1c000  /apex/com.android.media.swcodec/lib64/libcodec2_hidl@1.0.so (BuildId: a5a32c1b46862a22e9cce794cae3dc) (load bias 0x1000)
+    00007086'9d8e7000-00007086'9d90cfff r-x     1b000     26000  /apex/com.android.media.swcodec/lib64/libcodec2_hidl@1.0.so (BuildId: a5a32c1b46862a22e9cce794cae3dc) (load bias 0x1000)
+    00007086'9d90d000-00007086'9d90ffff r--     40000      3000  /apex/com.android.media.swcodec/lib64/libcodec2_hidl@1.0.so (BuildId: a5a32c1b46862a22e9cce794cae3dc) (load bias 0x1000)
+    00007086'9d910000-00007086'9d910fff rw-     42000      1000  /apex/com.android.media.swcodec/lib64/libcodec2_hidl@1.0.so (BuildId: a5a32c1b46862a22e9cce794cae3dc) (load bias 0x1000)
+    00007086'9d965000-00007086'9d965fff r--         0      1000  /system/lib64/libnativeloader_lazy.so (BuildId: 458e2779d9782e4df02a7d4b088673) (load bias 0x1000)
+    00007086'9d966000-00007086'9d966fff r-x         0      1000  /system/lib64/libnativeloader_lazy.so (BuildId: 458e2779d9782e4df02a7d4b088673) (load bias 0x1000)
+    00007086'9d967000-00007086'9d968fff r--         0      2000  /system/lib64/libnativeloader_lazy.so (BuildId: 458e2779d9782e4df02a7d4b088673) (load bias 0x1000)
+    00007086'9d969000-00007086'9d969fff rw-      1000      1000  /system/lib64/libnativeloader_lazy.so (BuildId: 458e2779d9782e4df02a7d4b088673) (load bias 0x1000)
+    00007086'9d999000-00007086'9d9a3fff r--         0      b000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@4.0.so (BuildId: 390abbd68fb3f296ea9a9da7077637) (load bias 0x1000)
+    00007086'9d9a4000-00007086'9d9acfff r-x      a000      9000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@4.0.so (BuildId: 390abbd68fb3f296ea9a9da7077637) (load bias 0x1000)
+    00007086'9d9ad000-00007086'9d9aefff r--     12000      2000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@4.0.so (BuildId: 390abbd68fb3f296ea9a9da7077637) (load bias 0x1000)
+    00007086'9d9af000-00007086'9d9affff rw-     13000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@4.0.so (BuildId: 390abbd68fb3f296ea9a9da7077637) (load bias 0x1000)
+    00007086'9d9d1000-00007086'9d9d1fff r--         0      1000  /apex/com.android.media.swcodec/lib64/libion.so (BuildId: d09da8746295b4503492109d433879) (load bias 0x1000)
+    00007086'9d9d2000-00007086'9d9d3fff r-x         0      2000  /apex/com.android.media.swcodec/lib64/libion.so (BuildId: d09da8746295b4503492109d433879) (load bias 0x1000)
+    00007086'9d9d4000-00007086'9d9d4fff r--      1000      1000  /apex/com.android.media.swcodec/lib64/libion.so (BuildId: d09da8746295b4503492109d433879) (load bias 0x1000)
+    00007086'9d9d5000-00007086'9d9d5fff rw-      1000      1000  /apex/com.android.media.swcodec/lib64/libion.so (BuildId: d09da8746295b4503492109d433879) (load bias 0x1000)
+    00007086'9da27000-00007086'9da28fff r--         0      2000  /system/lib64/libcgrouprc.so (BuildId: 071481c3f878c35296aa5bb8c8a758) (load bias 0x1000)
+    00007086'9da29000-00007086'9da2afff r-x      1000      2000  /system/lib64/libcgrouprc.so (BuildId: 071481c3f878c35296aa5bb8c8a758) (load bias 0x1000)
+    00007086'9da2b000-00007086'9da2bfff r--      2000      1000  /system/lib64/libcgrouprc.so (BuildId: 071481c3f878c35296aa5bb8c8a758) (load bias 0x1000)
+    00007086'9da2c000-00007086'9da2cfff rw-      2000      1000  /system/lib64/libcgrouprc.so (BuildId: 071481c3f878c35296aa5bb8c8a758) (load bias 0x1000)
+    00007086'9da4f000-00007086'9da59fff r--         0      b000  /apex/com.android.media.swcodec/lib64/android.hidl.token@1.0.so (BuildId: 2919d28c1f96daf6da0148c7c9d7da) (load bias 0x1000)
+    00007086'9da5a000-00007086'9da64fff r-x      a000      b000  /apex/com.android.media.swcodec/lib64/android.hidl.token@1.0.so (BuildId: 2919d28c1f96daf6da0148c7c9d7da) (load bias 0x1000)
+    00007086'9da65000-00007086'9da67fff r--     14000      3000  /apex/com.android.media.swcodec/lib64/android.hidl.token@1.0.so (BuildId: 2919d28c1f96daf6da0148c7c9d7da) (load bias 0x1000)
+    00007086'9da68000-00007086'9da68fff rw-     16000      1000  /apex/com.android.media.swcodec/lib64/android.hidl.token@1.0.so (BuildId: 2919d28c1f96daf6da0148c7c9d7da) (load bias 0x1000)
+    00007086'9da80000-00007086'9daabfff r--         0     2c000  /system/lib64/libunwindstack.so (BuildId: 6affcd9dc3135e4aa1820801fd3438) (load bias 0x1000)
+    00007086'9daac000-00007086'9daf2fff r-x     2b000     47000  /system/lib64/libunwindstack.so (BuildId: 6affcd9dc3135e4aa1820801fd3438) (load bias 0x1000)
+    00007086'9daf3000-00007086'9daf8fff r--     71000      6000  /system/lib64/libunwindstack.so (BuildId: 6affcd9dc3135e4aa1820801fd3438) (load bias 0x1000)
+    00007086'9daf9000-00007086'9daf9fff rw-     76000      1000  /system/lib64/libunwindstack.so (BuildId: 6affcd9dc3135e4aa1820801fd3438) (load bias 0x1000)
+    00007086'9db28000-00007086'9db32fff r--         0      b000  /system/lib64/android.hardware.graphics.allocator@4.0.so (BuildId: 18b8d23c3de95eefa07e158c6146f0) (load bias 0x1000)
+    00007086'9db33000-00007086'9db3bfff r-x      a000      9000  /system/lib64/android.hardware.graphics.allocator@4.0.so (BuildId: 18b8d23c3de95eefa07e158c6146f0) (load bias 0x1000)
+    00007086'9db3c000-00007086'9db3dfff r--     12000      2000  /system/lib64/android.hardware.graphics.allocator@4.0.so (BuildId: 18b8d23c3de95eefa07e158c6146f0) (load bias 0x1000)
+    00007086'9db3e000-00007086'9db3efff rw-     13000      1000  /system/lib64/android.hardware.graphics.allocator@4.0.so (BuildId: 18b8d23c3de95eefa07e158c6146f0) (load bias 0x1000)
+    00007086'9db5c000-00007086'9db63fff r--         0      8000  /apex/com.android.media.swcodec/lib64/libgralloctypes.so (BuildId: 1f53abe9c7bb2b1b0128819c493ca7) (load bias 0x1000)
+    00007086'9db64000-00007086'9db6efff r-x      7000      b000  /apex/com.android.media.swcodec/lib64/libgralloctypes.so (BuildId: 1f53abe9c7bb2b1b0128819c493ca7) (load bias 0x1000)
+    00007086'9db6f000-00007086'9db6ffff r--     11000      1000  /apex/com.android.media.swcodec/lib64/libgralloctypes.so (BuildId: 1f53abe9c7bb2b1b0128819c493ca7) (load bias 0x1000)
+    00007086'9db70000-00007086'9db70fff rw-     11000      1000  /apex/com.android.media.swcodec/lib64/libgralloctypes.so (BuildId: 1f53abe9c7bb2b1b0128819c493ca7) (load bias 0x1000)
+    00007086'9db71000-00007086'9db71fff rw-         0      1000
+    00007086'9db8f000-00007086'9db99fff r--         0      b000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@3.0.so (BuildId: af4e1e127f6484e984e48429c773c7) (load bias 0x1000)
+    00007086'9db9a000-00007086'9dba3fff r-x      a000      a000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@3.0.so (BuildId: af4e1e127f6484e984e48429c773c7) (load bias 0x1000)
+    00007086'9dba4000-00007086'9dba6fff r--     13000      3000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@3.0.so (BuildId: af4e1e127f6484e984e48429c773c7) (load bias 0x1000)
+    00007086'9dba7000-00007086'9dba7fff rw-     15000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.graphics.allocator@3.0.so (BuildId: af4e1e127f6484e984e48429c773c7) (load bias 0x1000)
+    00007086'9dbc0000-00007086'9dbcffff r--         0     10000  /system/lib64/android.hardware.configstore@1.0.so (BuildId: 5da4231b74a6b058ad85343533ff7c) (load bias 0x1000)
+    00007086'9dbd0000-00007086'9dbe3fff r-x      f000     14000  /system/lib64/android.hardware.configstore@1.0.so (BuildId: 5da4231b74a6b058ad85343533ff7c) (load bias 0x1000)
+    00007086'9dbe4000-00007086'9dbe6fff r--     22000      3000  /system/lib64/android.hardware.configstore@1.0.so (BuildId: 5da4231b74a6b058ad85343533ff7c) (load bias 0x1000)
+    00007086'9dbe7000-00007086'9dbe7fff rw-     24000      1000  /system/lib64/android.hardware.configstore@1.0.so (BuildId: 5da4231b74a6b058ad85343533ff7c) (load bias 0x1000)
+    00007086'9dc0e000-00007086'9dc1dfff r--         0     10000  /system/lib64/libutils.so (BuildId: f05215e676719d2e6ecb485e0d1bc7) (load bias 0x1000)
+    00007086'9dc1e000-00007086'9dc2afff r-x      f000      d000  /system/lib64/libutils.so (BuildId: f05215e676719d2e6ecb485e0d1bc7) (load bias 0x1000)
+    00007086'9dc2b000-00007086'9dc2cfff r--     1b000      2000  /system/lib64/libutils.so (BuildId: f05215e676719d2e6ecb485e0d1bc7) (load bias 0x1000)
+    00007086'9dc2d000-00007086'9dc2dfff rw-     1c000      1000  /system/lib64/libutils.so (BuildId: f05215e676719d2e6ecb485e0d1bc7) (load bias 0x1000)
+    00007086'9dc41000-00007086'9dc54fff r--         0     14000  /apex/com.android.media.swcodec/lib64/libstagefright_foundation.so (BuildId: 3d5b5059859cccf1321b16804c27e2) (load bias 0x1000)
+    00007086'9dc55000-00007086'9dc68fff r-x     13000     14000  /apex/com.android.media.swcodec/lib64/libstagefright_foundation.so (BuildId: 3d5b5059859cccf1321b16804c27e2) (load bias 0x1000)
+    00007086'9dc69000-00007086'9dc6bfff r--     26000      3000  /apex/com.android.media.swcodec/lib64/libstagefright_foundation.so (BuildId: 3d5b5059859cccf1321b16804c27e2) (load bias 0x1000)
+    00007086'9dc6c000-00007086'9dc6cfff rw-     28000      1000  /apex/com.android.media.swcodec/lib64/libstagefright_foundation.so (BuildId: 3d5b5059859cccf1321b16804c27e2) (load bias 0x1000)
+    00007086'9dc95000-00007086'9dc98fff r--         0      4000  /system/lib64/libnativewindow.so (BuildId: 5ad2c81c9fddb7669e42cdaae3b07b) (load bias 0x1000)
+    00007086'9dc99000-00007086'9dc9bfff r-x      3000      3000  /system/lib64/libnativewindow.so (BuildId: 5ad2c81c9fddb7669e42cdaae3b07b) (load bias 0x1000)
+    00007086'9dc9c000-00007086'9dc9cfff r--      5000      1000  /system/lib64/libnativewindow.so (BuildId: 5ad2c81c9fddb7669e42cdaae3b07b) (load bias 0x1000)
+    00007086'9dcd7000-00007086'9dce7fff r--         0     11000  /system/lib64/android.hardware.graphics.mapper@4.0.so (BuildId: 5b13082caa90b147185a65f78a9dee) (load bias 0x1000)
+    00007086'9dce8000-00007086'9dcfbfff r-x     10000     14000  /system/lib64/android.hardware.graphics.mapper@4.0.so (BuildId: 5b13082caa90b147185a65f78a9dee) (load bias 0x1000)
+    00007086'9dcfc000-00007086'9dcfefff r--     23000      3000  /system/lib64/android.hardware.graphics.mapper@4.0.so (BuildId: 5b13082caa90b147185a65f78a9dee) (load bias 0x1000)
+    00007086'9dcff000-00007086'9dcfffff rw-     25000      1000  /system/lib64/android.hardware.graphics.mapper@4.0.so (BuildId: 5b13082caa90b147185a65f78a9dee) (load bias 0x1000)
+    00007086'9dd17000-00007086'9dd17fff r--         0      1000  /system/lib64/android.hardware.graphics.common@1.0.so (BuildId: 0e0c6d14481f5e2ef643178a473577) (load bias 0x1000)
+    00007086'9dd18000-00007086'9dd18fff r-x         0      1000  /system/lib64/android.hardware.graphics.common@1.0.so (BuildId: 0e0c6d14481f5e2ef643178a473577) (load bias 0x1000)
+    00007086'9dd19000-00007086'9dd19fff r--         0      1000  /system/lib64/android.hardware.graphics.common@1.0.so (BuildId: 0e0c6d14481f5e2ef643178a473577) (load bias 0x1000)
+    00007086'9dd46000-00007086'9dd48fff r--         0      3000  /system/lib64/android.hardware.graphics.common-V1-ndk_platform.so (BuildId: 4ec5c6e751624fd42e266e34264c74) (load bias 0x1000)
+    00007086'9dd49000-00007086'9dd4afff r-x      2000      2000  /system/lib64/android.hardware.graphics.common-V1-ndk_platform.so (BuildId: 4ec5c6e751624fd42e266e34264c74) (load bias 0x1000)
+    00007086'9dd4b000-00007086'9dd4bfff r--      3000      1000  /system/lib64/android.hardware.graphics.common-V1-ndk_platform.so (BuildId: 4ec5c6e751624fd42e266e34264c74) (load bias 0x1000)
+    00007086'9dd4c000-00007086'9dd4cfff rw-      3000      1000  /system/lib64/android.hardware.graphics.common-V1-ndk_platform.so (BuildId: 4ec5c6e751624fd42e266e34264c74) (load bias 0x1000)
+    00007086'9dda7000-00007086'9dda7fff r--         0      1000  /system/lib64/android.hardware.graphics.common@1.2.so (BuildId: e70c6239dd6432bf91cfc6ff83f6f1) (load bias 0x1000)
+    00007086'9dda8000-00007086'9dda8fff r-x         0      1000  /system/lib64/android.hardware.graphics.common@1.2.so (BuildId: e70c6239dd6432bf91cfc6ff83f6f1) (load bias 0x1000)
+    00007086'9dda9000-00007086'9dda9fff r--         0      1000  /system/lib64/android.hardware.graphics.common@1.2.so (BuildId: e70c6239dd6432bf91cfc6ff83f6f1) (load bias 0x1000)
+    00007086'9ddf5000-00007086'9ddf5fff r--         0      1000  /apex/com.android.media.swcodec/lib64/libcodec2.so (BuildId: d93d0d013a0f2067225a21c7405d38) (load bias 0x1000)
+    00007086'9ddf6000-00007086'9ddf6fff r-x         0      1000  /apex/com.android.media.swcodec/lib64/libcodec2.so (BuildId: d93d0d013a0f2067225a21c7405d38) (load bias 0x1000)
+    00007086'9ddf7000-00007086'9ddf7fff r--         0      1000  /apex/com.android.media.swcodec/lib64/libcodec2.so (BuildId: d93d0d013a0f2067225a21c7405d38) (load bias 0x1000)
+    00007086'9de00000-00007086'9de13fff r--         0     14000  /apex/com.android.media.swcodec/lib64/libbase.so (BuildId: b9cda2c6d0b69e443ece56dfc40c12) (load bias 0x1000)
+    00007086'9de14000-00007086'9de7dfff r-x     13000     6a000  /apex/com.android.media.swcodec/lib64/libbase.so (BuildId: b9cda2c6d0b69e443ece56dfc40c12) (load bias 0x1000)
+    00007086'9de7e000-00007086'9de7efff r--     7c000      1000  /apex/com.android.media.swcodec/lib64/libbase.so (BuildId: b9cda2c6d0b69e443ece56dfc40c12) (load bias 0x1000)
+    00007086'9de7f000-00007086'9de7ffff rw-     7c000      1000  /apex/com.android.media.swcodec/lib64/libbase.so (BuildId: b9cda2c6d0b69e443ece56dfc40c12) (load bias 0x1000)
+    00007086'9de80000-00007086'9de96fff r--         0     17000  /apex/com.android.media.swcodec/lib64/android.hardware.media.c2@1.1.so (BuildId: b84a9a51fc7602ec33c7737c1e5f50) (load bias 0x1000)
+    00007086'9de97000-00007086'9deb0fff r-x     16000     1a000  /apex/com.android.media.swcodec/lib64/android.hardware.media.c2@1.1.so (BuildId: b84a9a51fc7602ec33c7737c1e5f50) (load bias 0x1000)
+    00007086'9deb1000-00007086'9deb4fff r--     2f000      4000  /apex/com.android.media.swcodec/lib64/android.hardware.media.c2@1.1.so (BuildId: b84a9a51fc7602ec33c7737c1e5f50) (load bias 0x1000)
+    00007086'9deb5000-00007086'9deb5fff rw-     32000      1000  /apex/com.android.media.swcodec/lib64/android.hardware.media.c2@1.1.so (BuildId: b84a9a51fc7602ec33c7737c1e5f50) (load bias 0x1000)
+    00007086'9ded4000-00007086'9ded4fff rw-         0      1000
+    00007086'9df39000-00007086'9df39fff rw-         0      1000
+    00007086'9e1e9000-00007086'9e1f9fff rw-         0     11000
+    00007086'9e203000-00007086'9e205fff r--         0      3000  /system/lib64/libnetd_client.so (BuildId: f59eb2ff79115c5857e6a1f7607259) (load bias 0x1000)
+    00007086'9e206000-00007086'9e206fff ---         0      1000
+    00007086'9e207000-00007086'9e20afff r-x      3000      4000  /system/lib64/libnetd_client.so (BuildId: f59eb2ff79115c5857e6a1f7607259) (load bias 0x1000)
+    00007086'9e20b000-00007086'9e20cfff r--      6000      2000  /system/lib64/libnetd_client.so (BuildId: f59eb2ff79115c5857e6a1f7607259) (load bias 0x1000)
+    00007086'9e20d000-00007086'9e20dfff rw-      7000      1000  /system/lib64/libnetd_client.so (BuildId: f59eb2ff79115c5857e6a1f7607259) (load bias 0x1000)
+    00007086'9e20f000-00007086'9e22efff r--         0     20000  /dev/__properties__/u:object_r:logd_prop:s0
+    00007086'9e22f000-00007086'9e24efff r--         0     20000  /dev/__properties__/u:object_r:log_tag_prop:s0
+    00007086'9e24f000-00007086'9e26efff r--         0     20000  /dev/__properties__/u:object_r:heapprofd_prop:s0
+    00007086'9e26f000-00007086'9e28efff r--         0     20000  /dev/__properties__/u:object_r:exported2_default_prop:s0
+    00007086'9e28f000-00007086'9e2aefff r--         0     20000  /dev/__properties__/u:object_r:debug_prop:s0
+    00007086'9e2af000-00007086'9e2cefff r--         0     20000  /dev/__properties__/properties_serial
+    00007086'9e2cf000-00007086'9e2d9fff r--         0      b000  /dev/__properties__/property_info
+    00007086'9e2da000-00007086'9e2dafff ---         0      1000
+    00007086'9e2db000-00007086'9e2defff rw-         0      4000
+    00007086'9e2df000-00007086'9e2dffff ---         0      1000
+    00007086'9e2ed000-00007086'9e2f5fff rw-         0      9000
+    00007086'9e2f6000-00007086'9e315fff r--         0     20000  /dev/__properties__/u:object_r:bq_config_prop:s0
+    00007086'9e316000-00007086'9e31dfff r--         0      8000
+    00007086'9e321000-00007086'9e323fff rw-         0      3000
+    00007086'9e324000-00007086'9e343fff r--         0     20000  /dev/__properties__/u:object_r:vendor_socket_hook_prop:s0
+    00007086'9e344000-00007086'9e3a7fff r--         0     64000
+    00007086'9e3a8000-00007086'9e3abfff rw-         0      4000
+    00007086'9e3ac000-00007086'9e40ffff r--         0     64000
+    00007086'9e410000-00007086'9e42ffff r--         0     20000  /dev/__properties__/u:object_r:vndk_prop:s0
+    00007086'9e430000-00007086'9e43cfff rw-         0      d000
+    00007086'9e43d000-00007086'9e4a0fff r--         0     64000
+    00007086'9e4a1000-00007086'9e4a1fff rw-         0      1000
+    00007086'9e4a2000-00007086'9e4c1fff r--         0     20000  /dev/__properties__/u:object_r:debug_prop:s0
+    00007086'9e4c2000-00007086'9e4e1fff r--         0     20000  /dev/__properties__/u:object_r:exported2_default_prop:s0
+    00007086'9e4e2000-00007086'9e4e2fff ---         0      1000
+    00007086'9e4e3000-00007086'9e4eafff rw-         0      8000
+    00007086'9e4eb000-00007086'9e4ebfff ---         0      1000
+    00007086'9e4ec000-00007086'9e50bfff r--         0     20000  /dev/__properties__/properties_serial
+    00007086'9e50c000-00007086'9e50dfff rw-         0      2000
+    00007086'9e50e000-00007086'9e518fff r--         0      b000  /dev/__properties__/property_info
+    00007086'9e519000-00007086'9e57cfff r--         0     64000
+    00007086'9e57d000-00007086'9e57efff rw-         0      2000
+    00007086'9e57f000-00007086'9e57ffff r--         0      1000
+    00007086'9e580000-00007086'9e580fff ---         0      1000
+    00007086'9e581000-00007086'9e58bfff rw-         0      b000
+    00007086'9e58c000-00007086'9e58cfff rw-         0      1000
+    00007086'9e58d000-00007086'9e5ccfff r--         0     40000  /apex/com.android.runtime/bin/linker64 (BuildId: e06f40625e1e2fca73098533030c80) (load bias 0x1000)
+    00007086'9e5cd000-00007086'9e69ffff r-x     3f000     d3000  /apex/com.android.runtime/bin/linker64 (BuildId: e06f40625e1e2fca73098533030c80) (load bias 0x1000)
+    00007086'9e6a0000-00007086'9e6a6fff r--    111000      7000  /apex/com.android.runtime/bin/linker64 (BuildId: e06f40625e1e2fca73098533030c80) (load bias 0x1000)
+    00007086'9e6a7000-00007086'9e6a8fff rw-    117000      2000  /apex/com.android.runtime/bin/linker64 (BuildId: e06f40625e1e2fca73098533030c80) (load bias 0x1000)
+    00007086'9e6a9000-00007086'9e6acfff rw-         0      4000
+    00007086'9e6ad000-00007086'9e6adfff r--         0      1000
+    00007086'9e6ae000-00007086'9e6b3fff rw-         0      6000
+    00007fff'e6ccc000-00007fff'e6cecfff rw-         0     21000  [stack]
+    00007fff'e6d43000-00007fff'e6d45fff r--         0      3000  [vvar]
+    00007fff'e6d46000-00007fff'e6d46fff r-x         0      1000  [vdso]
+    ffffffff'ff600000-ffffffff'ff600fff r-x         0      1000  [vsyscall]

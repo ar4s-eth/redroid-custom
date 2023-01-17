@@ -1,0 +1,299 @@
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'redroid/redroid_x86_64/redroid_x86_64:11/RD2A.211001.002/eng.frank.20221027.124148:userdebug/test-keys'
+Revision: '0'
+ABI: 'x86'
+Timestamp: 2022-12-22 13:22:06+0000
+pid: 54656, tid: 54656, name: android.hardwar  >>> /vendor/bin/hw/android.hardware.audio.service <<<
+uid: 1041
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+Abort message: 'Binder driver '/dev/binder' could not be opened.  Terminating.'
+    eax 00000000  ebx 0000d580  ecx 0000d580  edx 00000006
+    edi e9f8b81e  esi ff9a2790
+    ebp ea8c3b30  esp ff9a2738  eip ea8c3b39
+
+backtrace:
+      #00 pc 00000b39  [vdso] (__kernel_vsyscall+9)
+      #01 pc 0005b3e8  /apex/com.android.runtime/lib/bionic/libc.so (syscall+40) (BuildId: a9827ed2eeb48572d9f00a06c690d153)
+      #02 pc 00076ae1  /apex/com.android.runtime/lib/bionic/libc.so (abort+209) (BuildId: a9827ed2eeb48572d9f00a06c690d153)
+      #03 pc 00006245  /system/lib/liblog.so (__android_log_default_aborter+37) (BuildId: 36545d3ec578aad4b74c396bfd26296e)
+      #04 pc 00006d8d  /system/lib/liblog.so (__android_log_assert+253) (BuildId: 36545d3ec578aad4b74c396bfd26296e)
+      #05 pc 00070d2c  /apex/com.android.vndk.v30/lib/libbinder.so (android::ProcessState::ProcessState(char const*)+396) (BuildId: f247fe2e3f04c3092471773b7f9705ac)
+      #06 pc 00070e38  /apex/com.android.vndk.v30/lib/libbinder.so (android::ProcessState::initWithDriver(char const*)+264) (BuildId: f247fe2e3f04c3092471773b7f9705ac)
+      #07 pc 00001c5d  /vendor/bin/hw/android.hardware.audio.service (main+61) (BuildId: db719f4f3daa5fd2e895bdb8504aad11)
+      #08 pc 00052953  /apex/com.android.runtime/lib/bionic/libc.so (__libc_init+115) (BuildId: a9827ed2eeb48572d9f00a06c690d153)
+
+memory near ebx:
+    0000d560 -------- -------- -------- --------  ................
+    0000d570 -------- -------- -------- --------  ................
+    0000d580 -------- -------- -------- --------  ................
+    0000d590 -------- -------- -------- --------  ................
+    0000d5a0 -------- -------- -------- --------  ................
+    0000d5b0 -------- -------- -------- --------  ................
+    0000d5c0 -------- -------- -------- --------  ................
+    0000d5d0 -------- -------- -------- --------  ................
+    0000d5e0 -------- -------- -------- --------  ................
+    0000d5f0 -------- -------- -------- --------  ................
+    0000d600 -------- -------- -------- --------  ................
+    0000d610 -------- -------- -------- --------  ................
+    0000d620 -------- -------- -------- --------  ................
+    0000d630 -------- -------- -------- --------  ................
+    0000d640 -------- -------- -------- --------  ................
+    0000d650 -------- -------- -------- --------  ................
+
+memory near ecx:
+    0000d560 -------- -------- -------- --------  ................
+    0000d570 -------- -------- -------- --------  ................
+    0000d580 -------- -------- -------- --------  ................
+    0000d590 -------- -------- -------- --------  ................
+    0000d5a0 -------- -------- -------- --------  ................
+    0000d5b0 -------- -------- -------- --------  ................
+    0000d5c0 -------- -------- -------- --------  ................
+    0000d5d0 -------- -------- -------- --------  ................
+    0000d5e0 -------- -------- -------- --------  ................
+    0000d5f0 -------- -------- -------- --------  ................
+    0000d600 -------- -------- -------- --------  ................
+    0000d610 -------- -------- -------- --------  ................
+    0000d620 -------- -------- -------- --------  ................
+    0000d630 -------- -------- -------- --------  ................
+    0000d640 -------- -------- -------- --------  ................
+    0000d650 -------- -------- -------- --------  ................
+
+memory near ebp ([vdso]):
+    ea8c3b10 d3890000 5d5f5e5b 0900b8c3 c4eb003d  ....[^_]....=...
+    ea8c3b20 c324048b c3241c8b c324348b 90909090  ..$...$..4$.....
+    ea8c3b30 89555251 cd340fe5 595a5d80 909090c3  QRU...4..]ZY....
+    ea8c3b40 900deb90 90909090 90909090 90909090  ................
+    ea8c3b50 0077b858 80cd0000 26b48d90 00000000  X.w........&....
+    ea8c3b60 0000adb8 9080cd00 fffffa5a 00000064  ........Z...d...
+    ea8c3b70 05050072 fffa4d03 00005cff 05003b00  r....M...\...;..
+    ea8c3b80 fa610303 0052ffff 00720000 54030505  ..a...R...r....T
+    ea8c3b90 4afffffa 3b000000 03030500 fffffb5c  ...J...;....\...
+    ea8c3ba0 00000040 05050072 fffb4f03 000038ff  @...r....O...8..
+    ea8c3bb0 05003b00 ff7d0303 002effff 006f0000  .;....}.......o.
+    ea8c3bc0 70040404 25ffffff 6e000000 04040400  ...p...%...n....
+    ea8c3bd0 0fe8ae0f f9010f31 0fe8ae0f f9010f31  ....1.......1...
+    ea8c3be0 0fe8ae0f f9010f31 340fe589 050fcd89  ....1......4....
+    ea8c3bf0 3a434347 62552820 75746e75 352e3720  GCC: (Ubuntu 7.5
+    ea8c3c00 332d302e 6e756275 7e317574 302e3831  .0-3ubuntu1~18.0
+
+memory near edi (/apex/com.android.runtime/lib/bionic/libc.so):
+    e9f8b7fc 83ffffff 595a04c4 2e66c35b 00841f0f  ......ZY[.f.....
+    e9f8b80c 00000000 fc241be8 c7b850ff ff000000  ......$..P......
+    e9f8b81c c4832414 f0013d04 0b72ffff e850d8f7  .$...=....r...P.
+    e9f8b82c ffffff70 c304c483 1f0f2e66 00000084  p.......f.......
+    e9f8b83c 90660000 fc23ebe8 c8b850ff ff000000  ..f...#..P......
+    e9f8b84c c4832414 f0013d04 0b72ffff e850d8f7  .$...=....r...P.
+    e9f8b85c ffffff40 c304c483 1f0f2e66 00000084  @.......f.......
+    e9f8b86c 90660000 fc23bbe8 c9b850ff ff000000  ..f...#..P......
+    e9f8b87c c4832414 f0013d04 0b72ffff e850d8f7  .$...=....r...P.
+    e9f8b88c ffffff10 c304c483 1f0f2e66 00000084  ........f.......
+    e9f8b89c 90660000 fc238be8 cab850ff ff000000  ..f...#..P......
+    e9f8b8ac c4832414 f0013d04 0b72ffff e850d8f7  .$...=....r...P.
+    e9f8b8bc fffffee0 c304c483 1f0f2e66 00000084  ........f.......
+    e9f8b8cc 90660000 e8525153 fffc2358 245c8b50  ..f.SQR.X#..P.\$
+    e9f8b8dc 244c8b14 24548b18 00d1b81c 14ff0000  ..L$..T$........
+    e9f8b8ec 04c48324 fff0013d f70b72ff a1e850d8  $...=....r...P..
+
+memory near esi ([stack]):
+    ff9a2770 ff9a2790 e9f8b81e ea8c3b30 e9f36ac0  .'......0;...j..
+    ff9a2780 ff9a2830 00000001 ffffffdf ffffffff  0(..............
+    ff9a2790 00000000 00000000 ffffffff 0000d580  ................
+    ff9a27a0 00000411 00000000 00000000 00000000  ................
+    ff9a27b0 00000000 00000000 00000000 00000000  ................
+    ff9a27c0 00000000 00000000 00000000 00000000  ................
+    ff9a27d0 00000000 00000000 00000000 00000000  ................
+    ff9a27e0 00000000 00000000 00000000 00000000  ................
+    ff9a27f0 00000000 00000000 00000000 00000000  ................
+    ff9a2800 00000000 00000000 00000000 00000000  ................
+    ff9a2810 ea9fa3d0 ea3ac437 00000002 ea2576a7  ....7.:......v%.
+    ff9a2820 ff9a2890 00000400 0000001c 00000000  .(..............
+    ff9a2830 00000007 ea3ac437 00000000 ff9a2890  ....7.:......(..
+    ff9a2840 ea2533ad ea262338 ff9a2868 ea257246  .3%.8#&.h(..Fr%.
+    ff9a2850 ff9a2890 ea2533ad e9f8bfdd ff9a2890  .(...3%......(..
+    ff9a2860 ea2533ad ea262338 ff9a2cb8 ea257d8e  .3%.8#&..,...}%.
+
+memory near esp ([stack]):
+    ff9a2718 e9fadf00 e9f46c36 00000002 ff9a2738  ....6l......8'..
+    ff9a2728 00000000 00000008 00000002 ea9f3ccb  .............<..
+    ff9a2738 ea8c3b30 00000006 0000d580 e9f1b3e9  0;..............
+    ff9a2748 ea8c3b30 ff9a2848 0000d580 0000d580  0;..H(..........
+    ff9a2758 e9fadf00 e9f36ae2 0000014f 0000d580  .....j..O.......
+    ff9a2768 0000d580 00000006 ff9a2790 e9f8b81e  .........'......
+    ff9a2778 ea8c3b30 e9f36ac0 ff9a2830 00000001  0;...j..0(......
+    ff9a2788 ffffffdf ffffffff 00000000 00000000  ................
+    ff9a2798 ffffffff 0000d580 00000411 00000000  ................
+    ff9a27a8 00000000 00000000 00000000 00000000  ................
+    ff9a27b8 00000000 00000000 00000000 00000000  ................
+    ff9a27c8 00000000 00000000 00000000 00000000  ................
+    ff9a27d8 00000000 00000000 00000000 00000000  ................
+    ff9a27e8 00000000 00000000 00000000 00000000  ................
+    ff9a27f8 00000000 00000000 00000000 00000000  ................
+    ff9a2808 00000000 00000000 ea9fa3d0 ea3ac437  ............7.:.
+
+memory near eip ([vdso]):
+    ea8c3b18 0900b8c3 c4eb003d c324048b c3241c8b  ....=.....$...$.
+    ea8c3b28 c324348b 90909090 89555251 cd340fe5  .4$.....QRU...4.
+    ea8c3b38 595a5d80 909090c3 900deb90 90909090  .]ZY............
+    ea8c3b48 90909090 90909090 0077b858 80cd0000  ........X.w.....
+    ea8c3b58 26b48d90 00000000 0000adb8 9080cd00  ...&............
+    ea8c3b68 fffffa5a 00000064 05050072 fffa4d03  Z...d...r....M..
+    ea8c3b78 00005cff 05003b00 fa610303 0052ffff  .\...;....a...R.
+    ea8c3b88 00720000 54030505 4afffffa 3b000000  ..r....T...J...;
+    ea8c3b98 03030500 fffffb5c 00000040 05050072  ....\...@...r...
+    ea8c3ba8 fffb4f03 000038ff 05003b00 ff7d0303  .O...8...;....}.
+    ea8c3bb8 002effff 006f0000 70040404 25ffffff  ......o....p...%
+    ea8c3bc8 6e000000 04040400 0fe8ae0f f9010f31  ...n........1...
+    ea8c3bd8 0fe8ae0f f9010f31 0fe8ae0f f9010f31  ....1.......1...
+    ea8c3be8 340fe589 050fcd89 3a434347 62552820  ...4....GCC: (Ub
+    ea8c3bf8 75746e75 352e3720 332d302e 6e756275  untu 7.5.0-3ubun
+    ea8c3c08 7e317574 302e3831 37202934 302e352e  tu1~18.04) 7.5.0
+
+memory map (134 entries):
+    60f6a000-60f6afff r--         0      1000  /vendor/bin/hw/android.hardware.audio.service (BuildId: db719f4f3daa5fd2e895bdb8504aad) (load bias 0x1000)
+    60f6b000-60f6dfff r-x         0      3000  /vendor/bin/hw/android.hardware.audio.service (BuildId: db719f4f3daa5fd2e895bdb8504aad11) (load bias 0x1000)
+    60f6e000-60f6efff r--      2000      1000  /vendor/bin/hw/android.hardware.audio.service (BuildId: db719f4f3daa5fd2e895bdb8504aad) (load bias 0x1000)
+    e9b00000-e9bbffff rw-         0     c0000
+    e9bcc000-e9bcdfff r--         0      2000  /system/lib/libnetd_client.so (BuildId: 1bc565fde91e1558e19d88e917c644) (load bias 0x1000)
+    e9bce000-e9bcefff ---         0      1000
+    e9bcf000-e9bd3fff r-x      2000      5000  /system/lib/libnetd_client.so (BuildId: 1bc565fde91e1558e19d88e917c644) (load bias 0x1000)
+    e9bd4000-e9bd4fff r--      6000      1000  /system/lib/libnetd_client.so (BuildId: 1bc565fde91e1558e19d88e917c644) (load bias 0x1000)
+    e9bd5000-e9bd5fff rw-      6000      1000  /system/lib/libnetd_client.so (BuildId: 1bc565fde91e1558e19d88e917c644) (load bias 0x1000)
+    e9c00000-e9cbffff rw-         0     c0000
+    e9ce5000-e9d2cfff r--         0     48000  /apex/com.android.vndk.v30/lib/libhidlbase.so (BuildId: dd926467fe957243a89e03f55cc10d) (load bias 0x1000)
+    e9d2d000-e9db5fff r-x     47000     89000  /apex/com.android.vndk.v30/lib/libhidlbase.so (BuildId: dd926467fe957243a89e03f55cc10d) (load bias 0x1000)
+    e9db6000-e9dbbfff r--     cf000      6000  /apex/com.android.vndk.v30/lib/libhidlbase.so (BuildId: dd926467fe957243a89e03f55cc10d) (load bias 0x1000)
+    e9dbc000-e9dbcfff rw-     d4000      1000  /apex/com.android.vndk.v30/lib/libhidlbase.so (BuildId: dd926467fe957243a89e03f55cc10d) (load bias 0x1000)
+    e9dbd000-e9dbdfff rw-         0      1000
+    e9df4000-e9df4fff r--         0      1000  /apex/com.android.vndk.v30/lib/libhardware.so (BuildId: 00a5482ffdae51630b44112601abb0) (load bias 0x1000)
+    e9df5000-e9df5fff r-x         0      1000  /apex/com.android.vndk.v30/lib/libhardware.so (BuildId: 00a5482ffdae51630b44112601abb0) (load bias 0x1000)
+    e9df6000-e9df7fff r--         0      2000  /apex/com.android.vndk.v30/lib/libhardware.so (BuildId: 00a5482ffdae51630b44112601abb0) (load bias 0x1000)
+    e9e15000-e9e24fff r--         0     10000  /apex/com.android.vndk.v30/lib/libbase.so (BuildId: 3de81901a5672824069f223f0fd147) (load bias 0x1000)
+    e9e25000-e9e69fff r-x      f000     45000  /apex/com.android.vndk.v30/lib/libbase.so (BuildId: 3de81901a5672824069f223f0fd147) (load bias 0x1000)
+    e9e6a000-e9e6bfff r--     53000      2000  /apex/com.android.vndk.v30/lib/libbase.so (BuildId: 3de81901a5672824069f223f0fd147) (load bias 0x1000)
+    e9e6c000-e9e6cfff rw-     54000      1000  /apex/com.android.vndk.v30/lib/libbase.so (BuildId: 3de81901a5672824069f223f0fd147) (load bias 0x1000)
+    e9e9b000-e9ea8fff r--         0      e000  /apex/com.android.vndk.v30/lib/libutils.so (BuildId: 511f5ea9dd534b036fe5cdc0fca770) (load bias 0x1000)
+    e9ea9000-e9eb7fff r-x      d000      f000  /apex/com.android.vndk.v30/lib/libutils.so (BuildId: 511f5ea9dd534b036fe5cdc0fca770) (load bias 0x1000)
+    e9eb8000-e9eb8fff r--     1b000      1000  /apex/com.android.vndk.v30/lib/libutils.so (BuildId: 511f5ea9dd534b036fe5cdc0fca770) (load bias 0x1000)
+    e9eb9000-e9eb9fff rw-     1b000      1000  /apex/com.android.vndk.v30/lib/libutils.so (BuildId: 511f5ea9dd534b036fe5cdc0fca770) (load bias 0x1000)
+    e9ec0000-e9f01fff r--         0     42000  /apex/com.android.runtime/lib/bionic/libc.so (BuildId: a9827ed2eeb48572d9f00a06c690d153) (load bias 0x1000)
+    e9f02000-e9fabfff r-x     41000     aa000  /apex/com.android.runtime/lib/bionic/libc.so (BuildId: a9827ed2eeb48572d9f00a06c690d153) (load bias 0x1000)
+    e9fac000-e9faefff r--     ea000      3000  /apex/com.android.runtime/lib/bionic/libc.so (BuildId: a9827ed2eeb48572d9f00a06c690d1) (load bias 0x1000)
+    e9faf000-e9fb0fff rw-     ec000      2000  /apex/com.android.runtime/lib/bionic/libc.so (BuildId: a9827ed2eeb48572d9f00a06c690d1) (load bias 0x1000)
+    e9fb1000-e9fb3fff rw-         0      3000
+    e9fb4000-e9fb4fff r--         0      1000
+    e9fb5000-e9fd1fff rw-         0     1d000
+    ea001000-ea001fff r--         0      1000  /system/lib/libvndksupport.so (BuildId: 7a72d2a92eee92f4561a3ea95241c4) (load bias 0x1000)
+    ea002000-ea002fff r-x         0      1000  /system/lib/libvndksupport.so (BuildId: 7a72d2a92eee92f4561a3ea95241c4) (load bias 0x1000)
+    ea003000-ea003fff r--         0      1000  /system/lib/libvndksupport.so (BuildId: 7a72d2a92eee92f4561a3ea95241c4) (load bias 0x1000)
+    ea004000-ea004fff rw-         0      1000  /system/lib/libvndksupport.so (BuildId: 7a72d2a92eee92f4561a3ea95241c4) (load bias 0x1000)
+    ea00e000-ea071fff rw-         0     64000
+    ea072000-ea072fff r--         0      1000  /apex/com.android.runtime/lib/bionic/libdl.so (BuildId: c72628caeeeff4fe0df8fb4530fc2b) (load bias 0x1000)
+    ea073000-ea073fff r-x         0      1000  /apex/com.android.runtime/lib/bionic/libdl.so (BuildId: c72628caeeeff4fe0df8fb4530fc2b) (load bias 0x1000)
+    ea074000-ea074fff r--         0      1000  /apex/com.android.runtime/lib/bionic/libdl.so (BuildId: c72628caeeeff4fe0df8fb4530fc2b) (load bias 0x1000)
+    ea075000-ea075fff ---         0      1000
+    ea076000-ea076fff r--         0      1000
+    ea08c000-ea09bfff r--         0     10000  /system/lib/libbase.so (BuildId: df8f279adb58d3909b00d1b4bfdd14) (load bias 0x1000)
+    ea09c000-ea0e0fff r-x      f000     45000  /system/lib/libbase.so (BuildId: df8f279adb58d3909b00d1b4bfdd14) (load bias 0x1000)
+    ea0e1000-ea0e2fff r--     53000      2000  /system/lib/libbase.so (BuildId: df8f279adb58d3909b00d1b4bfdd14) (load bias 0x1000)
+    ea0e3000-ea0e3fff rw-     54000      1000  /system/lib/libbase.so (BuildId: df8f279adb58d3909b00d1b4bfdd14) (load bias 0x1000)
+    ea12c000-ea131fff r--         0      6000  /apex/com.android.vndk.v30/lib/libcutils.so (BuildId: 38c884111076bea837e09ab342781d) (load bias 0x1000)
+    ea132000-ea13afff r-x      5000      9000  /apex/com.android.vndk.v30/lib/libcutils.so (BuildId: 38c884111076bea837e09ab342781d) (load bias 0x1000)
+    ea13b000-ea13cfff r--      d000      2000  /apex/com.android.vndk.v30/lib/libcutils.so (BuildId: 38c884111076bea837e09ab342781d) (load bias 0x1000)
+    ea13d000-ea13dfff rw-      e000      1000  /apex/com.android.vndk.v30/lib/libcutils.so (BuildId: 38c884111076bea837e09ab342781d) (load bias 0x1000)
+    ea153000-ea168fff r--         0     16000  /apex/com.android.vndk.v30/lib/libprocessgroup.so (BuildId: 2cfd8d709eb79fc59b860787755d78) (load bias 0x1000)
+    ea169000-ea193fff r-x     15000     2b000  /apex/com.android.vndk.v30/lib/libprocessgroup.so (BuildId: 2cfd8d709eb79fc59b860787755d78) (load bias 0x1000)
+    ea194000-ea195fff r--     3f000      2000  /apex/com.android.vndk.v30/lib/libprocessgroup.so (BuildId: 2cfd8d709eb79fc59b860787755d78) (load bias 0x1000)
+    ea196000-ea196fff rw-     40000      1000  /apex/com.android.vndk.v30/lib/libprocessgroup.so (BuildId: 2cfd8d709eb79fc59b860787755d78) (load bias 0x1000)
+    ea1f1000-ea1f1fff r--         0      1000  /apex/com.android.runtime/lib/bionic/libdl_android.so (BuildId: b7dfb25bf40ad43cddfd21b4370d12) (load bias 0x1000)
+    ea1f2000-ea1f2fff r-x         0      1000  /apex/com.android.runtime/lib/bionic/libdl_android.so (BuildId: b7dfb25bf40ad43cddfd21b4370d12) (load bias 0x1000)
+    ea1f3000-ea1f3fff r--         0      1000  /apex/com.android.runtime/lib/bionic/libdl_android.so (BuildId: b7dfb25bf40ad43cddfd21b4370d12) (load bias 0x1000)
+    ea207000-ea220fff r--         0     1a000  /apex/com.android.runtime/lib/bionic/libm.so (BuildId: bb02f44f328c891a8bb1b71c715f3c) (load bias 0x1000)
+    ea221000-ea23bfff r-x     19000     1b000  /apex/com.android.runtime/lib/bionic/libm.so (BuildId: bb02f44f328c891a8bb1b71c715f3c) (load bias 0x1000)
+    ea23c000-ea23cfff r--     33000      1000  /apex/com.android.runtime/lib/bionic/libm.so (BuildId: bb02f44f328c891a8bb1b71c715f3c) (load bias 0x1000)
+    ea23d000-ea23dfff rw-     33000      1000  /apex/com.android.runtime/lib/bionic/libm.so (BuildId: bb02f44f328c891a8bb1b71c715f3c) (load bias 0x1000)
+    ea251000-ea254fff r--         0      4000  /system/lib/liblog.so (BuildId: 36545d3ec578aad4b74c396bfd26296e) (load bias 0x1000)
+    ea255000-ea261fff r-x      3000      d000  /system/lib/liblog.so (BuildId: 36545d3ec578aad4b74c396bfd26296e) (load bias 0x1000)
+    ea262000-ea262fff r--      f000      1000  /system/lib/liblog.so (BuildId: 36545d3ec578aad4b74c396bfd2629) (load bias 0x1000)
+    ea263000-ea263fff rw-      f000      1000  /system/lib/liblog.so (BuildId: 36545d3ec578aad4b74c396bfd2629) (load bias 0x1000)
+    ea29d000-ea29dfff r--         0      1000  /system/lib/libcgrouprc.so (BuildId: 2cc16c569d10efb4d23c7e1926382b) (load bias 0x1000)
+    ea29e000-ea29ffff r-x         0      2000  /system/lib/libcgrouprc.so (BuildId: 2cc16c569d10efb4d23c7e1926382b) (load bias 0x1000)
+    ea2a0000-ea2a1fff r--      1000      2000  /system/lib/libcgrouprc.so (BuildId: 2cc16c569d10efb4d23c7e1926382b) (load bias 0x1000)
+    ea2a2000-ea2a2fff rw-      2000      1000  /system/lib/libcgrouprc.so (BuildId: 2cc16c569d10efb4d23c7e1926382b) (load bias 0x1000)
+    ea2ca000-ea310fff r--         0     47000  /apex/com.android.vndk.v30/lib/libc++.so (BuildId: b9533f98893559057b05b042a275ec) (load bias 0x1000)
+    ea311000-ea378fff r-x     46000     68000  /apex/com.android.vndk.v30/lib/libc++.so (BuildId: b9533f98893559057b05b042a275ec) (load bias 0x1000)
+    ea379000-ea37cfff r--     ad000      4000  /apex/com.android.vndk.v30/lib/libc++.so (BuildId: b9533f98893559057b05b042a275ec) (load bias 0x1000)
+    ea37d000-ea37dfff rw-     b0000      1000  /apex/com.android.vndk.v30/lib/libc++.so (BuildId: b9533f98893559057b05b042a275ec) (load bias 0x1000)
+    ea37e000-ea37efff rw-         0      1000
+    ea384000-ea3bdfff r--         0     3a000  /apex/com.android.vndk.v30/lib/libbinder.so (BuildId: f247fe2e3f04c3092471773b7f9705ac) (load bias 0x1000)
+    ea3be000-ea402fff r-x     39000     45000  /apex/com.android.vndk.v30/lib/libbinder.so (BuildId: f247fe2e3f04c3092471773b7f9705ac) (load bias 0x1000)
+    ea403000-ea409fff r--     7d000      7000  /apex/com.android.vndk.v30/lib/libbinder.so (BuildId: f247fe2e3f04c3092471773b7f9705) (load bias 0x1000)
+    ea40a000-ea40bfff rw-     83000      2000  /apex/com.android.vndk.v30/lib/libbinder.so (BuildId: f247fe2e3f04c3092471773b7f9705) (load bias 0x1000)
+    ea442000-ea488fff r--         0     47000  /system/lib/libc++.so (BuildId: 5f1182f14bc88f9b0542ab7a9e70f1) (load bias 0x1000)
+    ea489000-ea4f0fff r-x     46000     68000  /system/lib/libc++.so (BuildId: 5f1182f14bc88f9b0542ab7a9e70f1) (load bias 0x1000)
+    ea4f1000-ea4f4fff r--     ad000      4000  /system/lib/libc++.so (BuildId: 5f1182f14bc88f9b0542ab7a9e70f1) (load bias 0x1000)
+    ea4f5000-ea4f5fff rw-     b0000      1000  /system/lib/libc++.so (BuildId: 5f1182f14bc88f9b0542ab7a9e70f1) (load bias 0x1000)
+    ea4f6000-ea4f6fff rw-         0      1000
+    ea570000-ea570fff rw-         0      1000
+    ea575000-ea577fff ---         0      3000
+    ea578000-ea578fff r--         0      1000
+    ea579000-ea57bfff ---         0      3000
+    ea57c000-ea57cfff r--         0      1000
+    ea57d000-ea59cfff r--         0     20000  /dev/__properties__/u:object_r:heapprofd_prop:s0
+    ea59d000-ea5bcfff r--         0     20000  /dev/__properties__/u:object_r:exported2_default_prop:s0
+    ea5bd000-ea5dcfff r--         0     20000  /dev/__properties__/u:object_r:debug_prop:s0
+    ea5dd000-ea5fcfff r--         0     20000  /dev/__properties__/properties_serial
+    ea5fd000-ea607fff r--         0      b000  /dev/__properties__/property_info
+    ea60c000-ea62bfff r--         0     20000  /dev/__properties__/u:object_r:logd_prop:s0
+    ea62c000-ea64bfff r--         0     20000  /dev/__properties__/u:object_r:log_tag_prop:s0
+    ea64c000-ea66bfff r--         0     20000  /dev/__properties__/u:object_r:vendor_socket_hook_prop:s0
+    ea66c000-ea733fff r--         0     c8000
+    ea734000-ea753fff r--         0     20000  /dev/__properties__/u:object_r:vndk_prop:s0
+    ea754000-ea754fff rw-         0      1000
+    ea756000-ea75dfff rw-         0      8000
+    ea761000-ea763fff rw-         0      3000
+    ea767000-ea767fff rw-         0      1000
+    ea768000-ea768fff ---         0      1000
+    ea769000-ea76bfff rw-         0      3000
+    ea76c000-ea76cfff ---         0      1000
+    ea76d000-ea774fff rw-         0      8000
+    ea775000-ea7d8fff r--         0     64000
+    ea7d9000-ea7dafff rw-         0      2000
+    ea7db000-ea7fafff r--         0     20000  /dev/__properties__/u:object_r:debug_prop:s0
+    ea7fb000-ea81afff r--         0     20000  /dev/__properties__/u:object_r:exported2_default_prop:s0
+    ea81b000-ea81bfff ---         0      1000
+    ea81c000-ea823fff rw-         0      8000
+    ea824000-ea824fff ---         0      1000
+    ea825000-ea844fff r--         0     20000  /dev/__properties__/properties_serial
+    ea845000-ea845fff rw-         0      1000
+    ea846000-ea850fff r--         0      b000  /dev/__properties__/property_info
+    ea851000-ea8b4fff r--         0     64000
+    ea8b5000-ea8b5fff rw-         0      1000
+    ea8b6000-ea8b6fff r--         0      1000
+    ea8b7000-ea8b7fff ---         0      1000
+    ea8b8000-ea8bcfff rw-         0      5000
+    ea8bd000-ea8bdfff r--         0      1000
+    ea8be000-ea8bffff rw-         0      2000
+    ea8c0000-ea8c2fff r--         0      3000  [vvar]
+    ea8c3000-ea8c3fff r-x         0      1000  [vdso]
+    ea8c4000-ea901fff r--         0     3e000  /apex/com.android.runtime/bin/linker (BuildId: d8fbe7c7a504bb601570328287d735) (load bias 0x1000)
+    ea902000-ea9f4fff r-x     3d000     f3000  /apex/com.android.runtime/bin/linker (BuildId: d8fbe7c7a504bb601570328287d735) (load bias 0x1000)
+    ea9f5000-ea9f8fff r--    12f000      4000  /apex/com.android.runtime/bin/linker (BuildId: d8fbe7c7a504bb601570328287d735) (load bias 0x1000)
+    ea9f9000-ea9fafff rw-    132000      2000  /apex/com.android.runtime/bin/linker (BuildId: d8fbe7c7a504bb601570328287d735) (load bias 0x1000)
+    ea9fb000-ea9fdfff rw-         0      3000
+    ea9fe000-ea9fefff r--         0      1000
+    ea9ff000-eaa04fff rw-         0      6000
+    ff984000-ff9a4fff rw-         0     21000  [stack]
+--------- tail end of log main
+12-22 13:22:06.361 54656 54656 E ProcessState: Binder driver /dev/vndbinder is unavailable. Using /dev/binder instead.
+12-22 13:22:06.361 54656 54656 W ProcessState: Opening '/dev/binder' failed: No such file or directory
+12-22 13:22:06.361 54656 54656 F ProcessState: Binder driver '/dev/binder' could not be opened.  Terminating.
+
+open files:
+    fd 0: /dev/null (unowned)
+    fd 1: /dev/null (unowned)
+    fd 2: /dev/null (unowned)
+    fd 3: socket:[7848374] (unowned)
+--------- log main
+12-22 13:22:06.361 54656 54656 E ProcessState: Binder driver /dev/vndbinder is unavailable. Using /dev/binder instead.
+12-22 13:22:06.361 54656 54656 W ProcessState: Opening '/dev/binder' failed: No such file or directory
+12-22 13:22:06.361 54656 54656 F ProcessState: Binder driver '/dev/binder' could not be opened.  Terminating.

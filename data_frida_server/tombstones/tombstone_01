@@ -1,0 +1,510 @@
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'redroid/redroid_x86_64/redroid_x86_64:11/RD2A.211001.002/eng.frank.20221027.124148:userdebug/test-keys'
+Revision: '0'
+ABI: 'x86_64'
+Timestamp: 2022-12-22 13:22:07+0000
+pid: 54794, tid: 54794, name: keystore  >>> /system/bin/keystore <<<
+uid: 1017
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+Abort message: 'Check failed: serviceManager.get() Failed to get ServiceManager'
+    rax 0000000000000000  rbx 000000000000d60a  rcx 00007a687f5a06c8  rdx 0000000000000006
+    r8  00007a688033fb60  r9  00007a688033fb60  r10 00007ffc88cf4fe0  r11 0000000000000246
+    r12 00007ffc88cf5250  r13 0000000000000000  r14 00007ffc88cf4fd8  r15 000000000000d60a
+    rdi 000000000000d60a  rsi 000000000000d60a
+    rbp 00007ffc88cf5290  rsp 00007ffc88cf4fc8  rip 00007a687f5a06c8
+
+backtrace:
+      #00 pc 000000000005a6c8  /apex/com.android.runtime/lib64/bionic/libc.so (syscall+24) (BuildId: 367a43aefd68123bf118851437b2730e)
+      #01 pc 000000000005d632  /apex/com.android.runtime/lib64/bionic/libc.so (abort+194) (BuildId: 367a43aefd68123bf118851437b2730e)
+      #02 pc 00000000000071fa  /system/lib64/liblog.so (__android_log_default_aborter+10) (BuildId: 8209228312a47a9d8fd4cc4e859b9b6d)
+      #03 pc 00000000000192a0  /system/lib64/libbase.so (android::base::LogMessage::~LogMessage()+368) (BuildId: 57a25d3b12cb351c70780a20000ea489)
+      #04 pc 000000000005053e  /system/bin/keystore (initializeKeymasters()+1406) (BuildId: 2558754ba9a85282865ad517fd770e95)
+      #05 pc 00000000000507c2  /system/bin/keystore (main+82) (BuildId: 2558754ba9a85282865ad517fd770e95)
+      #06 pc 0000000000050bf8  /apex/com.android.runtime/lib64/bionic/libc.so (__libc_init+104) (BuildId: 367a43aefd68123bf118851437b2730e)
+
+memory near rbx:
+    000000000000d5e8 ---------------- ----------------  ................
+    000000000000d5f8 ---------------- ----------------  ................
+    000000000000d608 ---------------- ----------------  ................
+    000000000000d618 ---------------- ----------------  ................
+    000000000000d628 ---------------- ----------------  ................
+    000000000000d638 ---------------- ----------------  ................
+    000000000000d648 ---------------- ----------------  ................
+    000000000000d658 ---------------- ----------------  ................
+    000000000000d668 ---------------- ----------------  ................
+    000000000000d678 ---------------- ----------------  ................
+    000000000000d688 ---------------- ----------------  ................
+    000000000000d698 ---------------- ----------------  ................
+    000000000000d6a8 ---------------- ----------------  ................
+    000000000000d6b8 ---------------- ----------------  ................
+    000000000000d6c8 ---------------- ----------------  ................
+    000000000000d6d8 ---------------- ----------------  ................
+
+memory near rcx (/apex/com.android.runtime/lib64/bionic/libc.so):
+    00007a687f5a06a8 ccccccccccccccff d68948f78948f889  ..........H..H..
+    00007a687f5a06b8 894dc2894dca8948 050f08244c8b4cc8  H..M..M..L.L$...
+    00007a687f5a06c8 0972fffff0013d48 057727e8c789d8f7  H=....r......'w.
+    00007a687f5a06d8 ccccccccccccc300 000025048b4c645f  ........_dL..%..
+    00007a687f5a06e8 8b4508408b4d0000 00001440c7411448  ..M.@.E.H.A.@...
+    00007a687f5a06f8 0f0000003ab88000 89451574c0855705  ...:.....W..t.E.
+    00007a687f5a0708 fffff0013d481448 e5e8c789d8f70972  H.H=....r.......
+    00007a687f5a0718 ccccccccc3000576 4155415641574155  v.......UAWAVAUA
+    00007a687f5a0728 894868ec83485354 6f8bfd8949102474  TSH..hH.t$.I...o
+    00007a687f5a0738 244c8948ed854814 1174302454894838  .H..H.L$8H.T$0t.
+    00007a687f5a0748 c0310b73086d3941 ebed310824448948  A9m.s.1.H.D$.1..
+    00007a687f5a0758 4ce8894ced014c0b c0760f6608246c89  .L..L..L.l$.f.v.
+    00007a687f5a0768 7f0f6648246c894c 1024748b4c502444  L.l$Hf..D$PL.t$.
+    00007a687f5a0778 0000002ebef7894c 448948000717cbe8  L............H.D
+    00007a687f5a0788 eb894800458b4024 7e0ff308246c8b48  $@.E.H..H.l$...~
+    00007a687f5a0798 66c16f0f6608054c 66fffc5c3905760f  L..f.o.f.v.9\..f
+
+memory near r8 (/system/lib64/libbase.so):
+    00007a688033fb40 000000000007cfa6 000000000007cfb6  ................
+    00007a688033fb50 000000000007cfc6 000000000007cfd6  ................
+    00007a688033fb60 00007a687fa621e0 00007a687fa62730  .!..hz..0'..hz..
+    00007a688033fb70 00007a687fa62370 00007a687fa62220  p#..hz.. "..hz..
+    00007a688033fb80 00007a687fa62200 00007a687fa62210  ."..hz..."..hz..
+    00007a688033fb90 00007a687fa621f0 00007a687fa621c0  .!..hz...!..hz..
+    00007a688033fba0 00007a687fa621d0 00007a687fa61fe0  .!..hz......hz..
+    00007a688033fbb0 0000000000000001 0000000000000002  ................
+    00007a688033fbc0 00007a68802e0700 0000000000000000  ....hz..........
+    00007a688033fbd0 0000000000000000 0000000000000000  ................
+    00007a688033fbe0 0000000000000000 0000000000000000  ................
+    00007a688033fbf0 0000000000000000 0000000000000000  ................
+    00007a688033fc00 0000000000000000 00007a688033fb60  ........`.3.hz..
+    00007a688033fc10 0000000000000001 00007a688033fb60  ........`.3.hz..
+    00007a688033fc20 0000000000000001 0000000000000000  ................
+    00007a688033fc30 0000000000000000 00007a688033fb60  ........`.3.hz..
+
+memory near r9 (/system/lib64/libbase.so):
+    00007a688033fb40 000000000007cfa6 000000000007cfb6  ................
+    00007a688033fb50 000000000007cfc6 000000000007cfd6  ................
+    00007a688033fb60 00007a687fa621e0 00007a687fa62730  .!..hz..0'..hz..
+    00007a688033fb70 00007a687fa62370 00007a687fa62220  p#..hz.. "..hz..
+    00007a688033fb80 00007a687fa62200 00007a687fa62210  ."..hz..."..hz..
+    00007a688033fb90 00007a687fa621f0 00007a687fa621c0  .!..hz...!..hz..
+    00007a688033fba0 00007a687fa621d0 00007a687fa61fe0  .!..hz......hz..
+    00007a688033fbb0 0000000000000001 0000000000000002  ................
+    00007a688033fbc0 00007a68802e0700 0000000000000000  ....hz..........
+    00007a688033fbd0 0000000000000000 0000000000000000  ................
+    00007a688033fbe0 0000000000000000 0000000000000000  ................
+    00007a688033fbf0 0000000000000000 0000000000000000  ................
+    00007a688033fc00 0000000000000000 00007a688033fb60  ........`.3.hz..
+    00007a688033fc10 0000000000000001 00007a688033fb60  ........`.3.hz..
+    00007a688033fc20 0000000000000001 0000000000000000  ................
+    00007a688033fc30 0000000000000000 00007a688033fb60  ........`.3.hz..
+
+memory near r10 ([stack]):
+    00007ffc88cf4fc0 00007ffc88cf5290 00007a687f5a3633  .R......36Z.hz..
+    00007ffc88cf4fd0 00007a688033fb60 ffffffffffffffdf  `.3.hz..........
+    00007ffc88cf4fe0 0000000000000000 00000000ffffffff  ................
+    00007ffc88cf4ff0 000003f90000d60a 0000000000000000  ................
+    00007ffc88cf5000 0000000000000000 0000000000000000  ................
+    00007ffc88cf5010 0000000000000000 0000000000000000  ................
+    00007ffc88cf5020 0000000000000000 0000000000000000  ................
+    00007ffc88cf5030 0000000000000000 0000000000000000  ................
+    00007ffc88cf5040 0000000000000000 0000000000000000  ................
+    00007ffc88cf5050 0000000000000000 0000000000000000  ................
+    00007ffc88cf5060 00007a68808ff2f8 00007a687f597387  ....hz...sY.hz..
+    00007ffc88cf5070 0000000000000006 00007ffc88cf5250  ........PR......
+    00007ffc88cf5080 0000000000000006 00007a66af47f880  ..........G.fz..
+    00007ffc88cf5090 00007ffc88cf5180 00007a687fa621fb  .Q.......!..hz..
+    00007ffc88cf50a0 00007a688033fb60 00007a68802d92a1  `.3.hz....-.hz..
+    00007ffc88cf50b0 0000000000000041 000000000000003f  A.......?.......
+
+memory near r12 ([stack]):
+    00007ffc88cf5230 0000000000001000 0000000000000000  ................
+    00007ffc88cf5240 00007a687f5ad910 00005e7270a2db10  ..Z.hz.....pr^..
+    00007ffc88cf5250 0000000000000000 0000000000000000  ................
+    00007ffc88cf5260 0000000000000000 00007ffc88cf52f8  .........R......
+    00007ffc88cf5270 37221f49c1590f35 00007ffc88cf52f8  5.Y.I."7.R......
+    00007ffc88cf5280 00005e7270a20770 0000000000000002  p..pr^..........
+    00007ffc88cf5290 0000000000000000 00007a687f596bf9  .........kY.hz..
+    00007ffc88cf52a0 00005e7270a2db10 0000000000000000  ...pr^..........
+    00007ffc88cf52b0 0000000000000000 0000000000000000  ................
+    00007ffc88cf52c0 0000000000000000 00005e72709e9bf8  ...........pr^..
+    00007ffc88cf52d0 00005e7270a2dae0 00005e7270a2daf0  ...pr^.....pr^..
+    00007ffc88cf52e0 00005e7270a2db10 00005e72709e9bbc  ...pr^.....pr^..
+    00007ffc88cf52f0 0000000000000002 00007ffc88cf5724  ........$W......
+    00007ffc88cf5300 00007ffc88cf5739 0000000000000000  9W..............
+    00007ffc88cf5310 00007ffc88cf574d 00007ffc88cf57e2  MW.......W......
+    00007ffc88cf5320 00007ffc88cf57f5 00007ffc88cf580a  .W.......X......
+
+memory near r14 ([stack]):
+    00007ffc88cf4fb8 00007ffc88cf5180 00007ffc88cf5290  .Q.......R......
+    00007ffc88cf4fc8 00007a687f5a3633 00007a688033fb60  36Z.hz..`.3.hz..
+    00007ffc88cf4fd8 ffffffffffffffdf 0000000000000000  ................
+    00007ffc88cf4fe8 00000000ffffffff 000003f90000d60a  ................
+    00007ffc88cf4ff8 0000000000000000 0000000000000000  ................
+    00007ffc88cf5008 0000000000000000 0000000000000000  ................
+    00007ffc88cf5018 0000000000000000 0000000000000000  ................
+    00007ffc88cf5028 0000000000000000 0000000000000000  ................
+    00007ffc88cf5038 0000000000000000 0000000000000000  ................
+    00007ffc88cf5048 0000000000000000 0000000000000000  ................
+    00007ffc88cf5058 0000000000000000 00007a68808ff2f8  ............hz..
+    00007ffc88cf5068 00007a687f597387 0000000000000006  .sY.hz..........
+    00007ffc88cf5078 00007ffc88cf5250 0000000000000006  PR..............
+    00007ffc88cf5088 00007a66af47f880 00007ffc88cf5180  ..G.fz...Q......
+    00007ffc88cf5098 00007a687fa621fb 00007a688033fb60  .!..hz..`.3.hz..
+    00007ffc88cf50a8 00007a68802d92a1 0000000000000041  ..-.hz..A.......
+
+memory near r15:
+    000000000000d5e8 ---------------- ----------------  ................
+    000000000000d5f8 ---------------- ----------------  ................
+    000000000000d608 ---------------- ----------------  ................
+    000000000000d618 ---------------- ----------------  ................
+    000000000000d628 ---------------- ----------------  ................
+    000000000000d638 ---------------- ----------------  ................
+    000000000000d648 ---------------- ----------------  ................
+    000000000000d658 ---------------- ----------------  ................
+    000000000000d668 ---------------- ----------------  ................
+    000000000000d678 ---------------- ----------------  ................
+    000000000000d688 ---------------- ----------------  ................
+    000000000000d698 ---------------- ----------------  ................
+    000000000000d6a8 ---------------- ----------------  ................
+    000000000000d6b8 ---------------- ----------------  ................
+    000000000000d6c8 ---------------- ----------------  ................
+    000000000000d6d8 ---------------- ----------------  ................
+
+memory near rdi:
+    000000000000d5e8 ---------------- ----------------  ................
+    000000000000d5f8 ---------------- ----------------  ................
+    000000000000d608 ---------------- ----------------  ................
+    000000000000d618 ---------------- ----------------  ................
+    000000000000d628 ---------------- ----------------  ................
+    000000000000d638 ---------------- ----------------  ................
+    000000000000d648 ---------------- ----------------  ................
+    000000000000d658 ---------------- ----------------  ................
+    000000000000d668 ---------------- ----------------  ................
+    000000000000d678 ---------------- ----------------  ................
+    000000000000d688 ---------------- ----------------  ................
+    000000000000d698 ---------------- ----------------  ................
+    000000000000d6a8 ---------------- ----------------  ................
+    000000000000d6b8 ---------------- ----------------  ................
+    000000000000d6c8 ---------------- ----------------  ................
+    000000000000d6d8 ---------------- ----------------  ................
+
+memory near rsi:
+    000000000000d5e8 ---------------- ----------------  ................
+    000000000000d5f8 ---------------- ----------------  ................
+    000000000000d608 ---------------- ----------------  ................
+    000000000000d618 ---------------- ----------------  ................
+    000000000000d628 ---------------- ----------------  ................
+    000000000000d638 ---------------- ----------------  ................
+    000000000000d648 ---------------- ----------------  ................
+    000000000000d658 ---------------- ----------------  ................
+    000000000000d668 ---------------- ----------------  ................
+    000000000000d678 ---------------- ----------------  ................
+    000000000000d688 ---------------- ----------------  ................
+    000000000000d698 ---------------- ----------------  ................
+    000000000000d6a8 ---------------- ----------------  ................
+    000000000000d6b8 ---------------- ----------------  ................
+    000000000000d6c8 ---------------- ----------------  ................
+    000000000000d6d8 ---------------- ----------------  ................
+
+memory near rbp ([stack]):
+    00007ffc88cf5270 37221f49c1590f35 00007ffc88cf52f8  5.Y.I."7.R......
+    00007ffc88cf5280 00005e7270a20770 0000000000000002  p..pr^..........
+    00007ffc88cf5290 0000000000000000 00007a687f596bf9  .........kY.hz..
+    00007ffc88cf52a0 00005e7270a2db10 0000000000000000  ...pr^..........
+    00007ffc88cf52b0 0000000000000000 0000000000000000  ................
+    00007ffc88cf52c0 0000000000000000 00005e72709e9bf8  ...........pr^..
+    00007ffc88cf52d0 00005e7270a2dae0 00005e7270a2daf0  ...pr^.....pr^..
+    00007ffc88cf52e0 00005e7270a2db10 00005e72709e9bbc  ...pr^.....pr^..
+    00007ffc88cf52f0 0000000000000002 00007ffc88cf5724  ........$W......
+    00007ffc88cf5300 00007ffc88cf5739 0000000000000000  9W..............
+    00007ffc88cf5310 00007ffc88cf574d 00007ffc88cf57e2  MW.......W......
+    00007ffc88cf5320 00007ffc88cf57f5 00007ffc88cf580a  .W.......X......
+    00007ffc88cf5330 00007ffc88cf5825 00007ffc88cf5838  %X......8X......
+    00007ffc88cf5340 00007ffc88cf5851 00007ffc88cf5878  QX......xX......
+    00007ffc88cf5350 00007ffc88cf58a1 00007ffc88cf58ce  .X.......X......
+    00007ffc88cf5360 00007ffc88cf58e7 00007ffc88cf5901  .X.......Y......
+
+memory near rsp ([stack]):
+    00007ffc88cf4fa8 0000000000000006 00007ffc88cf4fd8  .........O......
+    00007ffc88cf4fb8 00007ffc88cf5180 00007ffc88cf5290  .Q.......R......
+    00007ffc88cf4fc8 00007a687f5a3633 00007a688033fb60  36Z.hz..`.3.hz..
+    00007ffc88cf4fd8 ffffffffffffffdf 0000000000000000  ................
+    00007ffc88cf4fe8 00000000ffffffff 000003f90000d60a  ................
+    00007ffc88cf4ff8 0000000000000000 0000000000000000  ................
+    00007ffc88cf5008 0000000000000000 0000000000000000  ................
+    00007ffc88cf5018 0000000000000000 0000000000000000  ................
+    00007ffc88cf5028 0000000000000000 0000000000000000  ................
+    00007ffc88cf5038 0000000000000000 0000000000000000  ................
+    00007ffc88cf5048 0000000000000000 0000000000000000  ................
+    00007ffc88cf5058 0000000000000000 00007a68808ff2f8  ............hz..
+    00007ffc88cf5068 00007a687f597387 0000000000000006  .sY.hz..........
+    00007ffc88cf5078 00007ffc88cf5250 0000000000000006  PR..............
+    00007ffc88cf5088 00007a66af47f880 00007ffc88cf5180  ..G.fz...Q......
+    00007ffc88cf5098 00007a687fa621fb 00007a688033fb60  .!..hz..`.3.hz..
+
+memory near rip (/apex/com.android.runtime/lib64/bionic/libc.so):
+    00007a687f5a06a8 ccccccccccccccff d68948f78948f889  ..........H..H..
+    00007a687f5a06b8 894dc2894dca8948 050f08244c8b4cc8  H..M..M..L.L$...
+    00007a687f5a06c8 0972fffff0013d48 057727e8c789d8f7  H=....r......'w.
+    00007a687f5a06d8 ccccccccccccc300 000025048b4c645f  ........_dL..%..
+    00007a687f5a06e8 8b4508408b4d0000 00001440c7411448  ..M.@.E.H.A.@...
+    00007a687f5a06f8 0f0000003ab88000 89451574c0855705  ...:.....W..t.E.
+    00007a687f5a0708 fffff0013d481448 e5e8c789d8f70972  H.H=....r.......
+    00007a687f5a0718 ccccccccc3000576 4155415641574155  v.......UAWAVAUA
+    00007a687f5a0728 894868ec83485354 6f8bfd8949102474  TSH..hH.t$.I...o
+    00007a687f5a0738 244c8948ed854814 1174302454894838  .H..H.L$8H.T$0t.
+    00007a687f5a0748 c0310b73086d3941 ebed310824448948  A9m.s.1.H.D$.1..
+    00007a687f5a0758 4ce8894ced014c0b c0760f6608246c89  .L..L..L.l$.f.v.
+    00007a687f5a0768 7f0f6648246c894c 1024748b4c502444  L.l$Hf..D$PL.t$.
+    00007a687f5a0778 0000002ebef7894c 448948000717cbe8  L............H.D
+    00007a687f5a0788 eb894800458b4024 7e0ff308246c8b48  $@.E.H..H.l$...~
+    00007a687f5a0798 66c16f0f6608054c 66fffc5c3905760f  L..f.o.f.v.9\..f
+
+memory map (239 entries):
+    00005e72'709d0000-00005e72'709e8fff r--         0     19000  /system/bin/keystore (BuildId: 2558754ba9a85282865ad517fd770e95) (load bias 0x1000)
+    00005e72'709e9000-00005e72'70a2cfff r-x     18000     44000  /system/bin/keystore (BuildId: 2558754ba9a85282865ad517fd770e95) (load bias 0x1000)
+    00005e72'70a2d000-00005e72'70a31fff r--     5b000      5000  /system/bin/keystore (BuildId: 2558754ba9a85282865ad517fd770e) (load bias 0x1000)
+    00005e72'70a32000-00005e72'70a32fff rw-     5f000      1000  /system/bin/keystore (BuildId: 2558754ba9a85282865ad517fd770e) (load bias 0x1000)
+    00007a65'ef47d000-00007a66'1e80ffff ---         0  2f393000
+    00007a66'1e810000-00007a66'1e810fff r--         0      1000
+    00007a66'1e811000-00007a66'2c7bffff ---         0   dfaf000
+    00007a66'2c7c0000-00007a66'2c7c0fff r--         0      1000
+    00007a66'2c7c1000-00007a66'2c7c1fff r--         0      1000
+    00007a66'2c7c2000-00007a66'2f460fff ---         0   2c9f000
+    00007a66'2f461000-00007a66'2f461fff r--         0      1000
+    00007a66'2f462000-00007a66'6f485fff ---         0  40024000
+    00007a66'6f486000-00007a66'6f4c5fff rw-         0     40000
+    00007a66'6f4c6000-00007a66'7f484fff ---         0   ffbf000
+    00007a66'7f485000-00007a66'7f4c4fff rw-         0     40000
+    00007a66'7f4c5000-00007a66'8f481fff ---         0   ffbd000
+    00007a66'8f482000-00007a66'8f4c1fff rw-         0     40000
+    00007a66'8f4c2000-00007a66'9f487fff ---         0   ffc6000
+    00007a66'9f488000-00007a66'9f4c7fff rw-         0     40000
+    00007a66'9f4c8000-00007a66'af47efff ---         0   ffb7000
+    00007a66'af47f000-00007a66'af4befff rw-         0     40000
+    00007a66'af4bf000-00007a66'bf48cfff ---         0   ffce000
+    00007a66'bf48d000-00007a66'bf4ccfff rw-         0     40000
+    00007a66'bf4cd000-00007a66'cf486fff ---         0   ffba000
+    00007a66'cf487000-00007a66'cf4c6fff rw-         0     40000
+    00007a66'cf4c7000-00007a66'df483fff ---         0   ffbd000
+    00007a66'df484000-00007a66'df4c3fff rw-         0     40000
+    00007a66'df4c4000-00007a67'2f47dfff ---         0  4ffba000
+    00007a67'2f47e000-00007a67'2f4bdfff rw-         0     40000
+    00007a67'2f4be000-00007a67'6f485fff ---         0  3ffc8000
+    00007a67'6f486000-00007a67'6f4c5fff rw-         0     40000
+    00007a67'6f4c6000-00007a67'af47ffff ---         0  3ffba000
+    00007a67'af480000-00007a67'af4bffff rw-         0     40000
+    00007a67'af4c0000-00007a68'7f47cfff ---         0  cffbd000
+    00007a68'7f47d000-00007a68'7f4e0fff rw-         0     64000
+    00007a68'7f4e1000-00007a68'7f4e8fff r--         0      8000  /system/lib64/libcutils.so (BuildId: 87e96da4b8b5de121e507d1533e278) (load bias 0x1000)
+    00007a68'7f4e9000-00007a68'7f4f1fff r-x      7000      9000  /system/lib64/libcutils.so (BuildId: 87e96da4b8b5de121e507d1533e278) (load bias 0x1000)
+    00007a68'7f4f2000-00007a68'7f4f3fff r--      f000      2000  /system/lib64/libcutils.so (BuildId: 87e96da4b8b5de121e507d1533e278) (load bias 0x1000)
+    00007a68'7f4f4000-00007a68'7f4f4fff rw-     10000      1000  /system/lib64/libcutils.so (BuildId: 87e96da4b8b5de121e507d1533e278) (load bias 0x1000)
+    00007a68'7f52b000-00007a68'7f52bfff r--         0      1000  /apex/com.android.runtime/lib64/bionic/libdl.so (BuildId: 61f35ee4161de100ac5723b17fb1ef) (load bias 0x1000)
+    00007a68'7f52c000-00007a68'7f52cfff r-x         0      1000  /apex/com.android.runtime/lib64/bionic/libdl.so (BuildId: 61f35ee4161de100ac5723b17fb1ef) (load bias 0x1000)
+    00007a68'7f52d000-00007a68'7f52dfff r--         0      1000  /apex/com.android.runtime/lib64/bionic/libdl.so (BuildId: 61f35ee4161de100ac5723b17fb1ef) (load bias 0x1000)
+    00007a68'7f52e000-00007a68'7f52efff ---         0      1000
+    00007a68'7f52f000-00007a68'7f52ffff r--         0      1000
+    00007a68'7f546000-00007a68'7f587fff r--         0     42000  /apex/com.android.runtime/lib64/bionic/libc.so (BuildId: 367a43aefd68123bf118851437b2730e) (load bias 0x1000)
+    00007a68'7f588000-00007a68'7f613fff r-x     41000     8c000  /apex/com.android.runtime/lib64/bionic/libc.so (BuildId: 367a43aefd68123bf118851437b2730e) (load bias 0x1000)
+    00007a68'7f614000-00007a68'7f618fff r--     cc000      5000  /apex/com.android.runtime/lib64/bionic/libc.so (BuildId: 367a43aefd68123bf118851437b273) (load bias 0x1000)
+    00007a68'7f619000-00007a68'7f61afff rw-     d0000      2000  /apex/com.android.runtime/lib64/bionic/libc.so (BuildId: 367a43aefd68123bf118851437b273) (load bias 0x1000)
+    00007a68'7f61b000-00007a68'7f61dfff rw-         0      3000
+    00007a68'7f61e000-00007a68'7f61efff r--         0      1000
+    00007a68'7f61f000-00007a68'7f63bfff rw-         0     1d000
+    00007a68'7f663000-00007a68'7f664fff r--         0      2000  /apex/com.android.os.statsd/lib64/libstatssocket.so (BuildId: 9546b30847cd41d8eb7f16fbf08abc) (load bias 0x1000)
+    00007a68'7f665000-00007a68'7f667fff r-x      1000      3000  /apex/com.android.os.statsd/lib64/libstatssocket.so (BuildId: 9546b30847cd41d8eb7f16fbf08abc) (load bias 0x1000)
+    00007a68'7f668000-00007a68'7f668fff r--      3000      1000  /apex/com.android.os.statsd/lib64/libstatssocket.so (BuildId: 9546b30847cd41d8eb7f16fbf08abc) (load bias 0x1000)
+    00007a68'7f669000-00007a68'7f669fff rw-      3000      1000  /apex/com.android.os.statsd/lib64/libstatssocket.so (BuildId: 9546b30847cd41d8eb7f16fbf08abc) (load bias 0x1000)
+    00007a68'7f68e000-00007a68'7f68efff r--         0      1000  /apex/com.android.runtime/lib64/bionic/libdl_android.so (BuildId: 4dd58f6e6df0de811e48f7315746f1) (load bias 0x1000)
+    00007a68'7f68f000-00007a68'7f68ffff r-x         0      1000  /apex/com.android.runtime/lib64/bionic/libdl_android.so (BuildId: 4dd58f6e6df0de811e48f7315746f1) (load bias 0x1000)
+    00007a68'7f690000-00007a68'7f690fff r--         0      1000  /apex/com.android.runtime/lib64/bionic/libdl_android.so (BuildId: 4dd58f6e6df0de811e48f7315746f1) (load bias 0x1000)
+    00007a68'7f6c1000-00007a68'7f6ccfff r--         0      c000  /system/lib64/libkeystore_binder.so (BuildId: 1206d2708d6d2068aeb4749269b7f6) (load bias 0x1000)
+    00007a68'7f6cd000-00007a68'7f6d9fff r-x      b000      d000  /system/lib64/libkeystore_binder.so (BuildId: 1206d2708d6d2068aeb4749269b7f6) (load bias 0x1000)
+    00007a68'7f6da000-00007a68'7f6dcfff r--     17000      3000  /system/lib64/libkeystore_binder.so (BuildId: 1206d2708d6d2068aeb4749269b7f6) (load bias 0x1000)
+    00007a68'7f6dd000-00007a68'7f6ddfff rw-     19000      1000  /system/lib64/libkeystore_binder.so (BuildId: 1206d2708d6d2068aeb4749269b7f6) (load bias 0x1000)
+    00007a68'7f70a000-00007a68'7f719fff r--         0     10000  /system/lib64/libutils.so (BuildId: f05215e676719d2e6ecb485e0d1bc7) (load bias 0x1000)
+    00007a68'7f71a000-00007a68'7f726fff r-x      f000      d000  /system/lib64/libutils.so (BuildId: f05215e676719d2e6ecb485e0d1bc7) (load bias 0x1000)
+    00007a68'7f727000-00007a68'7f728fff r--     1b000      2000  /system/lib64/libutils.so (BuildId: f05215e676719d2e6ecb485e0d1bc7) (load bias 0x1000)
+    00007a68'7f729000-00007a68'7f729fff rw-     1c000      1000  /system/lib64/libutils.so (BuildId: f05215e676719d2e6ecb485e0d1bc7) (load bias 0x1000)
+    00007a68'7f741000-00007a68'7f751fff r--         0     11000  /system/lib64/android.hardware.keymaster@3.0.so (BuildId: dcfdc9a88db9038de1f013d7c7e720) (load bias 0x1000)
+    00007a68'7f752000-00007a68'7f76bfff r-x     10000     1a000  /system/lib64/android.hardware.keymaster@3.0.so (BuildId: dcfdc9a88db9038de1f013d7c7e720) (load bias 0x1000)
+    00007a68'7f76c000-00007a68'7f76ffff r--     29000      4000  /system/lib64/android.hardware.keymaster@3.0.so (BuildId: dcfdc9a88db9038de1f013d7c7e720) (load bias 0x1000)
+    00007a68'7f770000-00007a68'7f770fff rw-     2c000      1000  /system/lib64/android.hardware.keymaster@3.0.so (BuildId: dcfdc9a88db9038de1f013d7c7e720) (load bias 0x1000)
+    00007a68'7f78a000-00007a68'7f7e9fff r--         0     60000  /system/lib64/libcrypto.so (BuildId: 352b8777de8a345777aef60473f85d) (load bias 0x1000)
+    00007a68'7f7ea000-00007a68'7f8dcfff r-x     5f000     f3000  /system/lib64/libcrypto.so (BuildId: 352b8777de8a345777aef60473f85d) (load bias 0x1000)
+    00007a68'7f8dd000-00007a68'7f8ecfff r--    151000     10000  /system/lib64/libcrypto.so (BuildId: 352b8777de8a345777aef60473f85d) (load bias 0x1000)
+    00007a68'7f8ed000-00007a68'7f8edfff rw-    160000      1000  /system/lib64/libcrypto.so (BuildId: 352b8777de8a345777aef60473f85d) (load bias 0x1000)
+    00007a68'7f8ee000-00007a68'7f8effff rw-         0      2000
+    00007a68'7f909000-00007a68'7f918fff r--         0     10000  /system/lib64/android.hardware.confirmationui@1.0.so (BuildId: 0026ca4a2ca477f6ebc6a1dd617d3a) (load bias 0x1000)
+    00007a68'7f919000-00007a68'7f929fff r-x      f000     11000  /system/lib64/android.hardware.confirmationui@1.0.so (BuildId: 0026ca4a2ca477f6ebc6a1dd617d3a) (load bias 0x1000)
+    00007a68'7f92a000-00007a68'7f92cfff r--     1f000      3000  /system/lib64/android.hardware.confirmationui@1.0.so (BuildId: 0026ca4a2ca477f6ebc6a1dd617d3a) (load bias 0x1000)
+    00007a68'7f92d000-00007a68'7f92dfff rw-     21000      1000  /system/lib64/android.hardware.confirmationui@1.0.so (BuildId: 0026ca4a2ca477f6ebc6a1dd617d3a) (load bias 0x1000)
+    00007a68'7f954000-00007a68'7f955fff r--         0      2000  /system/lib64/libsoft_attestation_cert.so (BuildId: 6819346a8d541c0bd19ce96e696c26) (load bias 0x1000)
+    00007a68'7f956000-00007a68'7f956fff r-x      1000      1000  /system/lib64/libsoft_attestation_cert.so (BuildId: 6819346a8d541c0bd19ce96e696c26) (load bias 0x1000)
+    00007a68'7f957000-00007a68'7f957fff r--      1000      1000  /system/lib64/libsoft_attestation_cert.so (BuildId: 6819346a8d541c0bd19ce96e696c26) (load bias 0x1000)
+    00007a68'7f958000-00007a68'7f958fff rw-      1000      1000  /system/lib64/libsoft_attestation_cert.so (BuildId: 6819346a8d541c0bd19ce96e696c26) (load bias 0x1000)
+    00007a68'7f99e000-00007a68'7f9a9fff r--         0      c000  /system/lib64/libkeymaster4_1support.so (BuildId: 25d1b76e90705fa491c813061ead5d) (load bias 0x1000)
+    00007a68'7f9aa000-00007a68'7f9bbfff r-x      b000     12000  /system/lib64/libkeymaster4_1support.so (BuildId: 25d1b76e90705fa491c813061ead5d) (load bias 0x1000)
+    00007a68'7f9bc000-00007a68'7f9befff r--     1c000      3000  /system/lib64/libkeymaster4_1support.so (BuildId: 25d1b76e90705fa491c813061ead5d) (load bias 0x1000)
+    00007a68'7f9ea000-00007a68'7f9eafff r--         0      1000  /system/lib64/libvndksupport.so (BuildId: e7c752fedaa7e19cb3215eca7d251b) (load bias 0x1000)
+    00007a68'7f9eb000-00007a68'7f9ebfff r-x         0      1000  /system/lib64/libvndksupport.so (BuildId: e7c752fedaa7e19cb3215eca7d251b) (load bias 0x1000)
+    00007a68'7f9ec000-00007a68'7f9ecfff r--         0      1000  /system/lib64/libvndksupport.so (BuildId: e7c752fedaa7e19cb3215eca7d251b) (load bias 0x1000)
+    00007a68'7f9ed000-00007a68'7f9edfff rw-         0      1000  /system/lib64/libvndksupport.so (BuildId: e7c752fedaa7e19cb3215eca7d251b) (load bias 0x1000)
+    00007a68'7fa10000-00007a68'7fa14fff r--         0      5000  /system/lib64/libselinux.so (BuildId: 93609551f7debd0c62ecb6763e8a7d) (load bias 0x1000)
+    00007a68'7fa15000-00007a68'7fa20fff r-x      4000      c000  /system/lib64/libselinux.so (BuildId: 93609551f7debd0c62ecb6763e8a7d) (load bias 0x1000)
+    00007a68'7fa21000-00007a68'7fa21fff r--      f000      1000  /system/lib64/libselinux.so (BuildId: 93609551f7debd0c62ecb6763e8a7d) (load bias 0x1000)
+    00007a68'7fa22000-00007a68'7fa22fff rw-      f000      1000  /system/lib64/libselinux.so (BuildId: 93609551f7debd0c62ecb6763e8a7d) (load bias 0x1000)
+    00007a68'7fa5b000-00007a68'7fa60fff r--         0      6000  /system/lib64/liblog.so (BuildId: 8209228312a47a9d8fd4cc4e859b9b6d) (load bias 0x1000)
+    00007a68'7fa61000-00007a68'7fa6cfff r-x      5000      c000  /system/lib64/liblog.so (BuildId: 8209228312a47a9d8fd4cc4e859b9b6d) (load bias 0x1000)
+    00007a68'7fa6d000-00007a68'7fa6dfff r--     10000      1000  /system/lib64/liblog.so (BuildId: 8209228312a47a9d8fd4cc4e859b9b) (load bias 0x1000)
+    00007a68'7fa6e000-00007a68'7fa6efff rw-     10000      1000  /system/lib64/liblog.so (BuildId: 8209228312a47a9d8fd4cc4e859b9b) (load bias 0x1000)
+    00007a68'7fa85000-00007a68'7fa8efff r--         0      a000  /system/lib64/libkeymaster_messages.so (BuildId: 73a976c7e6da1525bc696f82715a49) (load bias 0x1000)
+    00007a68'7fa8f000-00007a68'7fa96fff r-x      9000      8000  /system/lib64/libkeymaster_messages.so (BuildId: 73a976c7e6da1525bc696f82715a49) (load bias 0x1000)
+    00007a68'7fa97000-00007a68'7fa98fff r--     10000      2000  /system/lib64/libkeymaster_messages.so (BuildId: 73a976c7e6da1525bc696f82715a49) (load bias 0x1000)
+    00007a68'7fa99000-00007a68'7fa99fff rw-     11000      1000  /system/lib64/libkeymaster_messages.so (BuildId: 73a976c7e6da1525bc696f82715a49) (load bias 0x1000)
+    00007a68'7fac9000-00007a68'7fac9fff r--         0      1000  /system/lib64/libpackagelistparser.so (BuildId: 55f2e7e6e07310ad8df0368e4435b9) (load bias 0x1000)
+    00007a68'7faca000-00007a68'7facafff r-x         0      1000  /system/lib64/libpackagelistparser.so (BuildId: 55f2e7e6e07310ad8df0368e4435b9) (load bias 0x1000)
+    00007a68'7facb000-00007a68'7faccfff r--         0      2000  /system/lib64/libpackagelistparser.so (BuildId: 55f2e7e6e07310ad8df0368e4435b9) (load bias 0x1000)
+    00007a68'7fb13000-00007a68'7fb37fff r--         0     25000  /system/lib64/libpcre2.so (BuildId: 671441b85bdaa6dd398ce5b3093898) (load bias 0x1000)
+    00007a68'7fb38000-00007a68'7fb69fff r-x     24000     32000  /system/lib64/libpcre2.so (BuildId: 671441b85bdaa6dd398ce5b3093898) (load bias 0x1000)
+    00007a68'7fb6a000-00007a68'7fb6afff r--     55000      1000  /system/lib64/libpcre2.so (BuildId: 671441b85bdaa6dd398ce5b3093898) (load bias 0x1000)
+    00007a68'7fb6b000-00007a68'7fb6bfff rw-     55000      1000  /system/lib64/libpcre2.so (BuildId: 671441b85bdaa6dd398ce5b3093898) (load bias 0x1000)
+    00007a68'7fb85000-00007a68'7fbd5fff r--         0     51000  /system/lib64/libbinder.so (BuildId: 5fc482c25a7d9cfc2cefed2e8861db) (load bias 0x1000)
+    00007a68'7fbd6000-00007a68'7fc1efff r-x     50000     49000  /system/lib64/libbinder.so (BuildId: 5fc482c25a7d9cfc2cefed2e8861db) (load bias 0x1000)
+    00007a68'7fc1f000-00007a68'7fc31fff r--     98000     13000  /system/lib64/libbinder.so (BuildId: 5fc482c25a7d9cfc2cefed2e8861db) (load bias 0x1000)
+    00007a68'7fc32000-00007a68'7fc33fff rw-     aa000      2000  /system/lib64/libbinder.so (BuildId: 5fc482c25a7d9cfc2cefed2e8861db) (load bias 0x1000)
+    00007a68'7fc4b000-00007a68'7fc50fff r--         0      6000  /system/lib64/libservices.so (BuildId: b1966e3b32aa6877cf8d2946919428) (load bias 0x1000)
+    00007a68'7fc51000-00007a68'7fc54fff r-x      5000      4000  /system/lib64/libservices.so (BuildId: b1966e3b32aa6877cf8d2946919428) (load bias 0x1000)
+    00007a68'7fc55000-00007a68'7fc56fff r--      8000      2000  /system/lib64/libservices.so (BuildId: b1966e3b32aa6877cf8d2946919428) (load bias 0x1000)
+    00007a68'7fc57000-00007a68'7fc57fff rw-      9000      1000  /system/lib64/libservices.so (BuildId: b1966e3b32aa6877cf8d2946919428) (load bias 0x1000)
+    00007a68'7fc8a000-00007a68'7fcacfff r--         0     23000  /apex/com.android.runtime/lib64/bionic/libm.so (BuildId: 58d2fa60dcbeae9a85160c5cf3a3c8) (load bias 0x1000)
+    00007a68'7fcad000-00007a68'7fcd5fff r-x     22000     29000  /apex/com.android.runtime/lib64/bionic/libm.so (BuildId: 58d2fa60dcbeae9a85160c5cf3a3c8) (load bias 0x1000)
+    00007a68'7fcd6000-00007a68'7fcd7fff r--     4a000      2000  /apex/com.android.runtime/lib64/bionic/libm.so (BuildId: 58d2fa60dcbeae9a85160c5cf3a3c8) (load bias 0x1000)
+    00007a68'7fcd8000-00007a68'7fcd8fff rw-     4b000      1000  /apex/com.android.runtime/lib64/bionic/libm.so (BuildId: 58d2fa60dcbeae9a85160c5cf3a3c8) (load bias 0x1000)
+    00007a68'7fd23000-00007a68'7fd3cfff r--         0     1a000  /system/lib64/libprocessgroup.so (BuildId: c1f6de04cdd6dc577bb6574dad04e3) (load bias 0x1000)
+    00007a68'7fd3d000-00007a68'7fd66fff r-x     19000     2a000  /system/lib64/libprocessgroup.so (BuildId: c1f6de04cdd6dc577bb6574dad04e3) (load bias 0x1000)
+    00007a68'7fd67000-00007a68'7fd69fff r--     42000      3000  /system/lib64/libprocessgroup.so (BuildId: c1f6de04cdd6dc577bb6574dad04e3) (load bias 0x1000)
+    00007a68'7fd6a000-00007a68'7fd6afff rw-     44000      1000  /system/lib64/libprocessgroup.so (BuildId: c1f6de04cdd6dc577bb6574dad04e3) (load bias 0x1000)
+    00007a68'7fda6000-00007a68'7fda6fff r--         0      1000  /system/lib64/libhardware.so (BuildId: 42ec727a1a1f37d66bce41800abe09) (load bias 0x1000)
+    00007a68'7fda7000-00007a68'7fda8fff r-x         0      2000  /system/lib64/libhardware.so (BuildId: 42ec727a1a1f37d66bce41800abe09) (load bias 0x1000)
+    00007a68'7fda9000-00007a68'7fda9fff r--      1000      1000  /system/lib64/libhardware.so (BuildId: 42ec727a1a1f37d66bce41800abe09) (load bias 0x1000)
+    00007a68'7fdcc000-00007a68'7fe1dfff r--         0     52000  /system/lib64/libhidlbase.so (BuildId: 96ae0204cac145d61cc62694efc65a) (load bias 0x1000)
+    00007a68'7fe1e000-00007a68'7fe98fff r-x     51000     7b000  /system/lib64/libhidlbase.so (BuildId: 96ae0204cac145d61cc62694efc65a) (load bias 0x1000)
+    00007a68'7fe99000-00007a68'7fea4fff r--     cb000      c000  /system/lib64/libhidlbase.so (BuildId: 96ae0204cac145d61cc62694efc65a) (load bias 0x1000)
+    00007a68'7fea5000-00007a68'7fea5fff rw-     d6000      1000  /system/lib64/libhidlbase.so (BuildId: 96ae0204cac145d61cc62694efc65a) (load bias 0x1000)
+    00007a68'7fea6000-00007a68'7fea6fff rw-         0      1000
+    00007a68'7fed3000-00007a68'7fee5fff r--         0     13000  /system/lib64/libkeystore_aidl.so (BuildId: 61b8ec1453f4cb607abd9494052f55) (load bias 0x1000)
+    00007a68'7fee6000-00007a68'7fef5fff r-x     12000     10000  /system/lib64/libkeystore_aidl.so (BuildId: 61b8ec1453f4cb607abd9494052f55) (load bias 0x1000)
+    00007a68'7fef6000-00007a68'7fefdfff r--     21000      8000  /system/lib64/libkeystore_aidl.so (BuildId: 61b8ec1453f4cb607abd9494052f55) (load bias 0x1000)
+    00007a68'7fefe000-00007a68'7fefefff rw-     28000      1000  /system/lib64/libkeystore_aidl.so (BuildId: 61b8ec1453f4cb607abd9494052f55) (load bias 0x1000)
+    00007a68'7ff04000-00007a68'7ff54fff r--         0     51000  /system/lib64/libc++.so (BuildId: f6b9efbc6d03f01d073cac072b6671) (load bias 0x1000)
+    00007a68'7ff55000-00007a68'7ffb4fff r-x     50000     60000  /system/lib64/libc++.so (BuildId: f6b9efbc6d03f01d073cac072b6671) (load bias 0x1000)
+    00007a68'7ffb5000-00007a68'7ffbbfff r--     af000      7000  /system/lib64/libc++.so (BuildId: f6b9efbc6d03f01d073cac072b6671) (load bias 0x1000)
+    00007a68'7ffbc000-00007a68'7ffbcfff rw-     b5000      1000  /system/lib64/libc++.so (BuildId: f6b9efbc6d03f01d073cac072b6671) (load bias 0x1000)
+    00007a68'7ffbd000-00007a68'7ffbffff rw-         0      3000
+    00007a68'7ffd7000-00007a68'7ffdefff r--         0      8000  /system/lib64/libstatslog.so (BuildId: 785d4aba2ffb8d7fa43de9f8f0ea03) (load bias 0x1000)
+    00007a68'7ffdf000-00007a68'7ffe7fff r-x      7000      9000  /system/lib64/libstatslog.so (BuildId: 785d4aba2ffb8d7fa43de9f8f0ea03) (load bias 0x1000)
+    00007a68'7ffe8000-00007a68'7ffe8fff r--      f000      1000  /system/lib64/libstatslog.so (BuildId: 785d4aba2ffb8d7fa43de9f8f0ea03) (load bias 0x1000)
+    00007a68'80025000-00007a68'8002cfff r--         0      8000  /system/lib64/libkeystore-attestation-application-id.so (BuildId: 946f1ff1c3fe94d63fb23ba0bdca30) (load bias 0x1000)
+    00007a68'8002d000-00007a68'80031fff r-x      7000      5000  /system/lib64/libkeystore-attestation-application-id.so (BuildId: 946f1ff1c3fe94d63fb23ba0bdca30) (load bias 0x1000)
+    00007a68'80032000-00007a68'80034fff r--      b000      3000  /system/lib64/libkeystore-attestation-application-id.so (BuildId: 946f1ff1c3fe94d63fb23ba0bdca30) (load bias 0x1000)
+    00007a68'80035000-00007a68'80035fff rw-      d000      1000  /system/lib64/libkeystore-attestation-application-id.so (BuildId: 946f1ff1c3fe94d63fb23ba0bdca30) (load bias 0x1000)
+    00007a68'8005b000-00007a68'8005dfff r--         0      3000  /system/lib64/libkeystore_parcelables.so (BuildId: 9e676bc85aaf4fff75f3e508a08224) (load bias 0x1000)
+    00007a68'8005e000-00007a68'80060fff r-x      2000      3000  /system/lib64/libkeystore_parcelables.so (BuildId: 9e676bc85aaf4fff75f3e508a08224) (load bias 0x1000)
+    00007a68'80061000-00007a68'80062fff r--      4000      2000  /system/lib64/libkeystore_parcelables.so (BuildId: 9e676bc85aaf4fff75f3e508a08224) (load bias 0x1000)
+    00007a68'80095000-00007a68'800a4fff r--         0     10000  /system/lib64/android.hardware.keymaster@4.1.so (BuildId: 4f227c11326411b76bec5f45d66225) (load bias 0x1000)
+    00007a68'800a5000-00007a68'800b5fff r-x      f000     11000  /system/lib64/android.hardware.keymaster@4.1.so (BuildId: 4f227c11326411b76bec5f45d66225) (load bias 0x1000)
+    00007a68'800b6000-00007a68'800b8fff r--     1f000      3000  /system/lib64/android.hardware.keymaster@4.1.so (BuildId: 4f227c11326411b76bec5f45d66225) (load bias 0x1000)
+    00007a68'800b9000-00007a68'800b9fff rw-     21000      1000  /system/lib64/android.hardware.keymaster@4.1.so (BuildId: 4f227c11326411b76bec5f45d66225) (load bias 0x1000)
+    00007a68'800d8000-00007a68'800e0fff r--         0      9000  /system/lib64/libkeymaster4support.so (BuildId: 55d451c3eddaa9d8cf49a5ca5188da) (load bias 0x1000)
+    00007a68'800e1000-00007a68'800e1fff ---         0      1000
+    00007a68'800e2000-00007a68'800eefff r-x      9000      d000  /system/lib64/libkeymaster4support.so (BuildId: 55d451c3eddaa9d8cf49a5ca5188da) (load bias 0x1000)
+    00007a68'800ef000-00007a68'800f0fff r--     15000      2000  /system/lib64/libkeymaster4support.so (BuildId: 55d451c3eddaa9d8cf49a5ca5188da) (load bias 0x1000)
+    00007a68'80106000-00007a68'8011bfff r--         0     16000  /system/lib64/libsoftkeymasterdevice.so (BuildId: d561cd6aa36cda8a33cf873b4a889e) (load bias 0x1000)
+    00007a68'8011c000-00007a68'80132fff r-x     15000     17000  /system/lib64/libsoftkeymasterdevice.so (BuildId: d561cd6aa36cda8a33cf873b4a889e) (load bias 0x1000)
+    00007a68'80133000-00007a68'80135fff r--     2b000      3000  /system/lib64/libsoftkeymasterdevice.so (BuildId: d561cd6aa36cda8a33cf873b4a889e) (load bias 0x1000)
+    00007a68'80136000-00007a68'80136fff rw-     2d000      1000  /system/lib64/libsoftkeymasterdevice.so (BuildId: d561cd6aa36cda8a33cf873b4a889e) (load bias 0x1000)
+    00007a68'80137000-00007a68'80137fff rw-         0      1000
+    00007a68'80166000-00007a68'80167fff r--         0      2000  /system/lib64/libcgrouprc.so (BuildId: 071481c3f878c35296aa5bb8c8a758) (load bias 0x1000)
+    00007a68'80168000-00007a68'80169fff r-x      1000      2000  /system/lib64/libcgrouprc.so (BuildId: 071481c3f878c35296aa5bb8c8a758) (load bias 0x1000)
+    00007a68'8016a000-00007a68'8016afff r--      2000      1000  /system/lib64/libcgrouprc.so (BuildId: 071481c3f878c35296aa5bb8c8a758) (load bias 0x1000)
+    00007a68'8016b000-00007a68'8016bfff rw-      2000      1000  /system/lib64/libcgrouprc.so (BuildId: 071481c3f878c35296aa5bb8c8a758) (load bias 0x1000)
+    00007a68'8019d000-00007a68'801bbfff r--         0     1f000  /system/lib64/libkeymaster_portable.so (BuildId: 82d81b569af3fb1c4f0e40f015a6de) (load bias 0x1000)
+    00007a68'801bc000-00007a68'801d8fff r-x     1e000     1d000  /system/lib64/libkeymaster_portable.so (BuildId: 82d81b569af3fb1c4f0e40f015a6de) (load bias 0x1000)
+    00007a68'801d9000-00007a68'801ddfff r--     3a000      5000  /system/lib64/libkeymaster_portable.so (BuildId: 82d81b569af3fb1c4f0e40f015a6de) (load bias 0x1000)
+    00007a68'801de000-00007a68'801defff rw-     3e000      1000  /system/lib64/libkeymaster_portable.so (BuildId: 82d81b569af3fb1c4f0e40f015a6de) (load bias 0x1000)
+    00007a68'80200000-00007a68'80212fff r--         0     13000  /system/lib64/android.hardware.keymaster@4.0.so (BuildId: 638f932b0ea6e45dd3c6e5fd286019) (load bias 0x1000)
+    00007a68'80213000-00007a68'80233fff r-x     12000     21000  /system/lib64/android.hardware.keymaster@4.0.so (BuildId: 638f932b0ea6e45dd3c6e5fd286019) (load bias 0x1000)
+    00007a68'80234000-00007a68'80237fff r--     32000      4000  /system/lib64/android.hardware.keymaster@4.0.so (BuildId: 638f932b0ea6e45dd3c6e5fd286019) (load bias 0x1000)
+    00007a68'80238000-00007a68'80238fff rw-     35000      1000  /system/lib64/android.hardware.keymaster@4.0.so (BuildId: 638f932b0ea6e45dd3c6e5fd286019) (load bias 0x1000)
+    00007a68'80240000-00007a68'80277fff r--         0     38000  /system/lib64/libprotobuf-cpp-lite.so (BuildId: 69acd3d0aae2d5167866814a3e917b) (load bias 0x1000)
+    00007a68'80278000-00007a68'802bbfff r-x     37000     44000  /system/lib64/libprotobuf-cpp-lite.so (BuildId: 69acd3d0aae2d5167866814a3e917b) (load bias 0x1000)
+    00007a68'802bc000-00007a68'802befff r--     7a000      3000  /system/lib64/libprotobuf-cpp-lite.so (BuildId: 69acd3d0aae2d5167866814a3e917b) (load bias 0x1000)
+    00007a68'802bf000-00007a68'802bffff rw-     7c000      1000  /system/lib64/libprotobuf-cpp-lite.so (BuildId: 69acd3d0aae2d5167866814a3e917b) (load bias 0x1000)
+    00007a68'802c0000-00007a68'802d3fff r--         0     14000  /system/lib64/libbase.so (BuildId: 57a25d3b12cb351c70780a20000ea489) (load bias 0x1000)
+    00007a68'802d4000-00007a68'8033cfff r-x     13000     69000  /system/lib64/libbase.so (BuildId: 57a25d3b12cb351c70780a20000ea489) (load bias 0x1000)
+    00007a68'8033d000-00007a68'8033efff r--     7b000      2000  /system/lib64/libbase.so (BuildId: 57a25d3b12cb351c70780a20000ea4) (load bias 0x1000)
+    00007a68'8033f000-00007a68'8033ffff rw-     7c000      1000  /system/lib64/libbase.so (BuildId: 57a25d3b12cb351c70780a20000ea4) (load bias 0x1000)
+    00007a68'803a0000-00007a68'803a0fff rw-         0      1000
+    00007a68'80406000-00007a68'80408fff r--         0      3000  /system/lib64/libnetd_client.so (BuildId: f59eb2ff79115c5857e6a1f7607259) (load bias 0x1000)
+    00007a68'80409000-00007a68'80409fff ---         0      1000
+    00007a68'8040a000-00007a68'8040dfff r-x      3000      4000  /system/lib64/libnetd_client.so (BuildId: f59eb2ff79115c5857e6a1f7607259) (load bias 0x1000)
+    00007a68'8040e000-00007a68'8040ffff r--      6000      2000  /system/lib64/libnetd_client.so (BuildId: f59eb2ff79115c5857e6a1f7607259) (load bias 0x1000)
+    00007a68'80410000-00007a68'80410fff rw-      7000      1000  /system/lib64/libnetd_client.so (BuildId: f59eb2ff79115c5857e6a1f7607259) (load bias 0x1000)
+    00007a68'80463000-00007a68'80463fff rw-         0      1000
+    00007a68'80498000-00007a68'804b7fff r--         0     20000  /dev/__properties__/u:object_r:heapprofd_prop:s0
+    00007a68'804b8000-00007a68'804d7fff r--         0     20000  /dev/__properties__/u:object_r:exported2_default_prop:s0
+    00007a68'804d8000-00007a68'804f7fff r--         0     20000  /dev/__properties__/u:object_r:debug_prop:s0
+    00007a68'804f8000-00007a68'80517fff r--         0     20000  /dev/__properties__/properties_serial
+    00007a68'80518000-00007a68'80522fff r--         0      b000  /dev/__properties__/property_info
+    00007a68'80527000-00007a68'80546fff r--         0     20000  /dev/__properties__/u:object_r:logd_prop:s0
+    00007a68'80547000-00007a68'80566fff r--         0     20000  /dev/__properties__/u:object_r:log_tag_prop:s0
+    00007a68'80567000-00007a68'80586fff r--         0     20000  /dev/__properties__/u:object_r:vendor_socket_hook_prop:s0
+    00007a68'80587000-00007a68'8064efff r--         0     c8000
+    00007a68'8064f000-00007a68'8066efff r--         0     20000  /dev/__properties__/u:object_r:vndk_prop:s0
+    00007a68'8066f000-00007a68'80671fff rw-         0      3000
+    00007a68'80673000-00007a68'80673fff rw-         0      1000
+    00007a68'80675000-00007a68'80677fff rw-         0      3000
+    00007a68'8067a000-00007a68'8067bfff rw-         0      2000
+    00007a68'80682000-00007a68'80682fff rw-         0      1000
+    00007a68'80683000-00007a68'80683fff ---         0      1000
+    00007a68'80684000-00007a68'80687fff rw-         0      4000
+    00007a68'80688000-00007a68'80688fff ---         0      1000
+    00007a68'80689000-00007a68'8068bfff rw-         0      3000
+    00007a68'8068c000-00007a68'8068cfff r--         0      1000
+    00007a68'8068d000-00007a68'80694fff rw-         0      8000
+    00007a68'80695000-00007a68'806f8fff r--         0     64000
+    00007a68'806f9000-00007a68'80718fff r--         0     20000  /dev/__properties__/u:object_r:debug_prop:s0
+    00007a68'80719000-00007a68'80738fff r--         0     20000  /dev/__properties__/u:object_r:exported2_default_prop:s0
+    00007a68'80739000-00007a68'80739fff ---         0      1000
+    00007a68'8073a000-00007a68'80741fff rw-         0      8000
+    00007a68'80742000-00007a68'80742fff ---         0      1000
+    00007a68'80743000-00007a68'80762fff r--         0     20000  /dev/__properties__/properties_serial
+    00007a68'80763000-00007a68'80764fff rw-         0      2000
+    00007a68'80765000-00007a68'8076ffff r--         0      b000  /dev/__properties__/property_info
+    00007a68'80770000-00007a68'807d3fff r--         0     64000
+    00007a68'807d4000-00007a68'807d5fff rw-         0      2000
+    00007a68'807d6000-00007a68'807d6fff r--         0      1000
+    00007a68'807d7000-00007a68'807d7fff ---         0      1000
+    00007a68'807d8000-00007a68'807e2fff rw-         0      b000
+    00007a68'807e3000-00007a68'807e3fff rw-         0      1000
+    00007a68'807e4000-00007a68'80823fff r--         0     40000  /apex/com.android.runtime/bin/linker64 (BuildId: e06f40625e1e2fca73098533030c80) (load bias 0x1000)
+    00007a68'80824000-00007a68'808f6fff r-x     3f000     d3000  /apex/com.android.runtime/bin/linker64 (BuildId: e06f40625e1e2fca73098533030c80) (load bias 0x1000)
+    00007a68'808f7000-00007a68'808fdfff r--    111000      7000  /apex/com.android.runtime/bin/linker64 (BuildId: e06f40625e1e2fca73098533030c80) (load bias 0x1000)
+    00007a68'808fe000-00007a68'808fffff rw-    117000      2000  /apex/com.android.runtime/bin/linker64 (BuildId: e06f40625e1e2fca73098533030c80) (load bias 0x1000)
+    00007a68'80900000-00007a68'80903fff rw-         0      4000
+    00007a68'80904000-00007a68'80904fff r--         0      1000
+    00007a68'80905000-00007a68'8090afff rw-         0      6000
+    00007ffc'88cd5000-00007ffc'88cf5fff rw-         0     21000  [stack]
+    00007ffc'88db5000-00007ffc'88db7fff r--         0      3000  [vvar]
+    00007ffc'88db8000-00007ffc'88db8fff r-x         0      1000  [vdso]
+    ffffffff'ff600000-ffffffff'ff600fff r-x         0      1000  [vsyscall]
+--------- tail end of log main
+12-22 13:22:06.537 54794 54794 E HidlServiceManagement: getService: defaultServiceManager() is null
+12-22 13:22:06.537 54794 54794 F keystore: Check failed: serviceManager.get() Failed to get ServiceManager
+
+open files:
+    fd 0: /dev/null (unowned)
+    fd 1: /dev/null (unowned)
+    fd 2: /dev/null (unowned)
+    fd 3: socket:[7847334] (unowned)
+--------- log main
+12-22 13:22:06.537 54794 54794 E HidlServiceManagement: getService: defaultServiceManager() is null
+12-22 13:22:06.537 54794 54794 F keystore: Check failed: serviceManager.get() Failed to get ServiceManager
